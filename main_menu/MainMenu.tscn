@@ -1,0 +1,32 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://main_menu/MainMenu.gd" type="Script" id=1]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -1.0
+margin_right = -1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 19.0
+margin_top = 19.0
+margin_right = 98.0
+margin_bottom = 33.0
+text = "MAIN MENU"
+
+[node name="PlayGameButton" type="Button" parent="."]
+margin_left = 18.5406
+margin_top = 44.4975
+margin_right = 98.5406
+margin_bottom = 64.4975
+text = "Play Game"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="PlayGameButton" to="." method="_on_PlayGameButton_pressed"]
