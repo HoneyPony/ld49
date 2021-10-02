@@ -50,7 +50,7 @@ func augment_level(lvl, code):
 	return lvl
 
 var levels = [
-	augment_level(LevelInfo.new(1), "0A 0A"),
+	augment_level(LevelInfo.new(1), ""),
 	LevelInfo.new(2),
 	LevelInfo.new(3, true),
 	LevelInfo.new(4, true),

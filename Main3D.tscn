@@ -1,9 +1,10 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://LevelSelect.tscn" type="PackedScene" id=1]
 [ext_resource path="res://gui_3d.gd" type="Script" id=2]
 [ext_resource path="res://tablet/YourStuff.gd" type="Script" id=3]
 [ext_resource path="res://your_notepad/NotepadMat.tres" type="Material" id=4]
+[ext_resource path="res://world/world_test.glb" type="PackedScene" id=5]
 
 [sub_resource type="SpatialMaterial" id=1]
 vertex_color_use_as_albedo = true
@@ -266,6 +267,17 @@ viewport_path = NodePath("Viewport")
 resource_local_to_scene = true
 albedo_texture = SubResource( 11 )
 
+[sub_resource type="ProceduralSky" id=25]
+ground_bottom_color = Color( 0.0941176, 0.313726, 0.207843, 1 )
+ground_horizon_color = Color( 0.0156863, 0.117647, 0.00784314, 1 )
+
+[sub_resource type="Environment" id=26]
+background_mode = 2
+background_sky = SubResource( 25 )
+ambient_light_color = Color( 0.243137, 0.243137, 0.243137, 1 )
+ambient_light_energy = 2.54
+ambient_light_sky_contribution = 0.13
+
 [node name="Spatial" type="Spatial"]
 
 [node name="Camera" type="Camera" parent="."]
@@ -358,8 +370,11 @@ visible = false
 mesh = SubResource( 10 )
 material/0 = SubResource( 12 )
 
-[node name="DirectionalLight" type="DirectionalLight" parent="."]
-transform = Transform( 0.340226, 0.848662, -0.404993, -0.0293049, 0.440046, 0.897497, 0.939887, -0.293484, 0.174585, -3.15847, 1.15015, 0 )
+[node name="world_test" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.73567, 0 )
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 26 )
 
 [connection signal="mouse_entered" from="Camera/YourStuff/Slider/GUIPanel3D/SlideToTabletThing" to="Camera/YourStuff" method="_on_SlideToTabletThing_mouse_entered"]
 [connection signal="mouse_entered" from="Camera/YourStuff/Slider/notepad/SlideToNotepadThing" to="Camera/YourStuff" method="_on_SlideToNotepadThing_mouse_entered"]
