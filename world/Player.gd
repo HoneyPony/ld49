@@ -66,17 +66,18 @@ func handle_mouse_things(delta):
 func _physics_process(delta):
 	handle_mouse_things(delta)
 	
-	var dir = get_move_dir()
-	var target = move_speed * dir
-	
-	var accel_dir = (target - velocity).normalized()
-	var max_accel = (target - velocity).length()
-	
-	var accel_cur_mag = min(accel_magnitude * delta, max_accel)
-	
-	velocity += accel_dir * accel_cur_mag
-	
-	velocity = move_and_slide(velocity)
-	
+	if not YourStuff.showing_stuff:
+		var dir = get_move_dir()
+		var target = move_speed * dir
+		
+		var accel_dir = (target - velocity).normalized()
+		var max_accel = (target - velocity).length()
+		
+		var accel_cur_mag = min(accel_magnitude * delta, max_accel)
+		
+		velocity += accel_dir * accel_cur_mag
+		
+		velocity = move_and_slide(velocity)
+		
 	if Input.is_action_just_pressed("pause"):
 		is_paused = not is_paused

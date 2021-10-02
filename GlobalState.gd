@@ -20,6 +20,18 @@ var has_Turb = false
 var has_SL = false
 var has_SR = false
 
+func activate_ability(which):
+	if which == 0:
+		has_L = true
+	if which == 1:
+		has_R = true
+	if which == 2:
+		has_Turb = true
+	if which == 3:
+		has_SL = true
+	if which == 4:
+		has_SR = true
+
 var current_level_id = -1
 
 class LevelInfo:
