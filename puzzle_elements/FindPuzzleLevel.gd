@@ -7,6 +7,7 @@ func _ready():
 	var candidates = get_tree().get_nodes_in_group("Levels")
 	
 	for c in candidates:
+		c.hide() # Hide all non-correct ones
 		if c.id == GS.current_level_id:
 			GS.current_puzzle_level = c
 			c.show()

@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://puzzle_elements/SquareBasedObstruction.gd" type="Script" id=1]
+[ext_resource path="res://puzzle_elements/1x2Square.svg" type="Texture" id=2]
+
+[node name="1x2Square" type="Sprite" groups=[
+"Obstruct",
+]]
+scale = Vector2( 0.25, 0.25 )
+z_index = 50
+texture = ExtResource( 2 )
+script = ExtResource( 1 )
+width_px = 64

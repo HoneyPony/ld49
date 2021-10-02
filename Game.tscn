@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=2]
+[gd_scene load_steps=33 format=2]
 
 [ext_resource path="res://ship_code/PlayButton_Pressed.svg" type="Texture" id=1]
 [ext_resource path="res://misc/GLES2RepeatingTexture.gdshader" type="Shader" id=2]
@@ -21,6 +21,8 @@
 [ext_resource path="res://puzzle_elements/FindPuzzleLevel.gd" type="Script" id=19]
 [ext_resource path="res://puzzle_elements/BackButton.gd" type="Script" id=20]
 [ext_resource path="res://puzzle_elements/PureGrayBG.svg" type="Texture" id=21]
+[ext_resource path="res://puzzle_elements/2x1Square.tscn" type="PackedScene" id=22]
+[ext_resource path="res://puzzle_elements/1x2Square.tscn" type="PackedScene" id=23]
 
 [sub_resource type="StyleBoxFlat" id=11]
 bg_color = Color( 0.0666667, 0.0666667, 0.0666667, 1 )
@@ -367,6 +369,86 @@ position = Vector2( 32, -96 )
 [node name="CameraPlace" type="Node2D" parent="LevelMoveForward2x"]
 position = Vector2( -64, 0 )
 
+[node name="LevelTurnLefts1" type="Node2D" parent="." groups=[
+"Levels",
+]]
+visible = false
+script = ExtResource( 13 )
+__meta__ = {
+"_edit_lock_": true
+}
+id = 3
+
+[node name="2x2Square" parent="LevelTurnLefts1" instance=ExtResource( 11 )]
+position = Vector2( 224, 96 )
+
+[node name="ShipEndPoint" type="Sprite" parent="LevelTurnLefts1"]
+position = Vector2( 128, -128 )
+rotation = -1.5708
+scale = Vector2( 0.25, 0.25 )
+z_index = -30
+texture = ExtResource( 12 )
+
+[node name="2x2Square2" parent="LevelTurnLefts1" instance=ExtResource( 11 )]
+position = Vector2( 32, -96 )
+
+[node name="CameraPlace" type="Node2D" parent="LevelTurnLefts1"]
+position = Vector2( 64, -64 )
+
+[node name="LevelTurnLefts2" type="Node2D" parent="." groups=[
+"Levels",
+]]
+visible = false
+script = ExtResource( 13 )
+__meta__ = {
+"_edit_lock_": true
+}
+id = 4
+
+[node name="2x2Square" parent="LevelTurnLefts2" instance=ExtResource( 11 )]
+position = Vector2( 224, 96 )
+
+[node name="ShipEndPoint" type="Sprite" parent="LevelTurnLefts2"]
+position = Vector2( 0, -128 )
+rotation = 3.14159
+scale = Vector2( 0.25, 0.25 )
+z_index = -30
+texture = ExtResource( 12 )
+
+[node name="CameraPlace" type="Node2D" parent="LevelTurnLefts2"]
+position = Vector2( 64, -64 )
+
+[node name="2x`Square" parent="LevelTurnLefts2" instance=ExtResource( 22 )]
+position = Vector2( 32, -64 )
+
+[node name="LevelTurnRight" type="Node2D" parent="." groups=[
+"Levels",
+]]
+visible = false
+script = ExtResource( 13 )
+__meta__ = {
+"_edit_lock_": true
+}
+needed_width_tiles = 6
+needed_height_tiles = 6
+id = 5
+
+[node name="2x2Square" parent="LevelTurnRight" instance=ExtResource( 11 )]
+position = Vector2( 160, 96 )
+
+[node name="ShipEndPoint" type="Sprite" parent="LevelTurnRight"]
+position = Vector2( 64, 192 )
+rotation = 1.5708
+scale = Vector2( 0.25, 0.25 )
+z_index = -30
+texture = ExtResource( 12 )
+
+[node name="CameraPlace" type="Node2D" parent="LevelTurnRight"]
+position = Vector2( 32, 96 )
+
+[node name="2x`Square" parent="LevelTurnRight" instance=ExtResource( 22 )]
+position = Vector2( -96, 192 )
+
 [node name="LevelTurnLTurnR" type="Node2D" parent="." groups=[
 "Levels",
 ]]
@@ -376,8 +458,10 @@ __meta__ = {
 "_edit_lock_": true
 }
 needed_width_tiles = 7
+id = 6
 
 [node name="2x2Square" parent="LevelTurnLTurnR" instance=ExtResource( 11 )]
+position = Vector2( 32, -96 )
 
 [node name="ShipEndPoint" type="Sprite" parent="LevelTurnLTurnR"]
 position = Vector2( 256, -128 )
@@ -386,10 +470,45 @@ z_index = -30
 texture = ExtResource( 12 )
 
 [node name="2x2Square2" parent="LevelTurnLTurnR" instance=ExtResource( 11 )]
-position = Vector2( 32, -96 )
+position = Vector2( 224, -32 )
 
 [node name="CameraPlace" type="Node2D" parent="LevelTurnLTurnR"]
 position = Vector2( 128, -64 )
+
+[node name="LevelTurnLTurnR2" type="Node2D" parent="." groups=[
+"Levels",
+]]
+script = ExtResource( 13 )
+__meta__ = {
+"_edit_lock_": true
+}
+needed_width_tiles = 7
+needed_height_tiles = 7
+id = 7
+
+[node name="2x2Square" parent="LevelTurnLTurnR2" instance=ExtResource( 11 )]
+position = Vector2( 160, 32 )
+
+[node name="2x2Square3" parent="LevelTurnLTurnR2" instance=ExtResource( 11 )]
+position = Vector2( 160, -224 )
+
+[node name="ShipEndPoint" type="Sprite" parent="LevelTurnLTurnR2"]
+position = Vector2( 128, -128 )
+scale = Vector2( 0.25, 0.25 )
+z_index = -30
+texture = ExtResource( 12 )
+
+[node name="2x2Square2" parent="LevelTurnLTurnR2" instance=ExtResource( 11 )]
+position = Vector2( -32, -96 )
+
+[node name="CameraPlace" type="Node2D" parent="LevelTurnLTurnR2"]
+position = Vector2( 64, -64 )
+
+[node name="1x2" parent="LevelTurnLTurnR2" instance=ExtResource( 23 )]
+position = Vector2( 64, -160 )
+
+[node name="2x1" parent="LevelTurnLTurnR2" instance=ExtResource( 22 )]
+position = Vector2( 224, -64 )
 
 [node name="LevelTurboRLplusF" type="Node2D" parent="." groups=[
 "Levels",
@@ -417,9 +536,9 @@ position = Vector2( 32, 96 )
 position = Vector2( 128, 64 )
 
 [connection signal="pressed" from="UI/Root/PlayButton" to="Ship" method="play"]
-[connection signal="pressed" from="UI/Root/PlayButton" to="UI/Root/PlayButton" method="_vis"]
 [connection signal="pressed" from="UI/Root/PlayButton" to="UI/Root/StopButton" method="_vis"]
+[connection signal="pressed" from="UI/Root/PlayButton" to="UI/Root/PlayButton" method="_vis"]
 [connection signal="pressed" from="UI/Root/StopButton" to="Ship" method="reset_self"]
-[connection signal="pressed" from="UI/Root/StopButton" to="UI/Root/PlayButton" method="_vis"]
 [connection signal="pressed" from="UI/Root/StopButton" to="UI/Root/StopButton" method="_vis"]
+[connection signal="pressed" from="UI/Root/StopButton" to="UI/Root/PlayButton" method="_vis"]
 [connection signal="pressed" from="UI/Root/BackButton" to="UI/Root/BackButton" method="_on_BackButton_pressed"]
