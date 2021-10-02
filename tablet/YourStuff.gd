@@ -85,6 +85,8 @@ func _process(delta):
 		if showing_stuff:
 			$ShowStuffP.play("Show")
 		else:
+			get_viewport().warp_mouse(get_viewport().size / 2.0)
 			$ShowStuffP.play("Hide")
+			
 	
 	
