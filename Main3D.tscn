@@ -1616,7 +1616,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19.1355, -0.828642, 13.9618 )
 mesh = SubResource( 49 )
 material/0 = null
 
-[node name="TornPage" parent="." instance=ExtResource( 8 )]
+[node name="TornPage_L" parent="." instance=ExtResource( 8 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.809212, 2.47012 )
 
 [connection signal="mouse_entered" from="Player/Camera/YourStuff/Slider/GUIPanel3D/SlideToTabletThing" to="Player/Camera/YourStuff" method="_on_SlideToTabletThing_mouse_entered"]
