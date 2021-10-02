@@ -23,8 +23,10 @@ func get_move_dir():
 
 var velocity = Vector3.ZERO
 
-var move_speed = 6
+var move_speed = 16#8
 var accel_magnitude = 70
+
+var gravity = 60
 
 var ignore_next_mouse_frame = true
 
@@ -63,6 +65,10 @@ func handle_mouse_things(delta):
 		rotate_on_mouse(mouse, delta)
 	ignore_next_mouse_frame = false
 
+func handle_oob():
+	if translation.y <= -50:
+		translation = Vector3(5.5, 1.15, -0.5)
+
 func _physics_process(delta):
 	handle_mouse_things(delta)
 	
@@ -70,14 +76,23 @@ func _physics_process(delta):
 		var dir = get_move_dir()
 		var target = move_speed * dir
 		
-		var accel_dir = (target - velocity).normalized()
-		var max_accel = (target - velocity).length()
+		var vel_nograv = Vector3(velocity.x, 0, velocity.z)
+		
+		var accel_dir = (target - vel_nograv).normalized()
+		var max_accel = (target - vel_nograv).length()
 		
 		var accel_cur_mag = min(accel_magnitude * delta, max_accel)
 		
-		velocity += accel_dir * accel_cur_mag
+		vel_nograv += accel_dir * accel_cur_mag
+		
+		velocity.x = vel_nograv.x
+		velocity.z = vel_nograv.z
+		
+		velocity.y = max(velocity.y - gravity * delta, -30)
 		
 		velocity = move_and_slide(velocity)
+		
+	handle_oob()
 		
 	if Input.is_action_just_pressed("pause"):
 		is_paused = not is_paused
