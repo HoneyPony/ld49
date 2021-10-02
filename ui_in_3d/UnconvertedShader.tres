@@ -1,10 +1,6 @@
-[gd_resource type="SpatialMaterial" load_steps=2 format=2]
-
-[sub_resource type="ViewportTexture" id=8]
-viewport_path = NodePath("GUIPanel3D/Viewport")
+[gd_resource type="SpatialMaterial" format=2]
 
 [resource]
 resource_local_to_scene = true
 flags_unshaded = true
 albedo_color = Color( 1.2, 1.2, 1.2, 1 )
-albedo_texture = SubResource( 8 )
