@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://fonts/LCDFont.tres" type="DynamicFont" id=1]
 [ext_resource path="res://level_select/LevelFrame.svg" type="Texture" id=2]
@@ -7,6 +7,11 @@
 [ext_resource path="res://level_select/LevelIsHard.svg" type="Texture" id=5]
 [ext_resource path="res://level_select/LevelCompleted.svg" type="Texture" id=6]
 [ext_resource path="res://level_select/LevelButton.gd" type="Script" id=7]
+[ext_resource path="res://fonts/lcd.14.otf" type="DynamicFontData" id=8]
+
+[sub_resource type="DynamicFont" id=1]
+size = 28
+font_data = ExtResource( 8 )
 
 [node name="LevelButton" type="TextureButton"]
 texture_normal = ExtResource( 2 )
@@ -38,10 +43,26 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="NoteOnCMDS" type="Label" parent="."]
+margin_left = -31.5467
+margin_top = 132.961
+margin_right = 128.453
+margin_bottom = 172.961
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 1, 0, 1 )
+text = "53,E9,A0"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Hard" type="TextureRect" parent="."]
 margin_right = 40.0
 margin_bottom = 40.0
 mouse_filter = 2
 texture = ExtResource( 5 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [connection signal="pressed" from="." to="." method="_on_LevelButton_pressed"]

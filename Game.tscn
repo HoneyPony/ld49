@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=2]
+[gd_scene load_steps=34 format=2]
 
 [ext_resource path="res://ship_code/PlayButton_Pressed.svg" type="Texture" id=1]
 [ext_resource path="res://misc/GLES2RepeatingTexture.gdshader" type="Shader" id=2]
@@ -11,7 +11,7 @@
 [ext_resource path="res://ship_code/PlayButton.svg" type="Texture" id=9]
 [ext_resource path="res://puzzle_elements/Grid.svg" type="Texture" id=10]
 [ext_resource path="res://puzzle_elements/2x2Square.tscn" type="PackedScene" id=11]
-[ext_resource path="res://puzzle_elements/ShipEndPoint_NoOutline.svg" type="Texture" id=12]
+[ext_resource path="res://puzzle_elements/RotGate.tscn" type="PackedScene" id=12]
 [ext_resource path="res://puzzle_elements/PuzzleLevel.gd" type="Script" id=13]
 [ext_resource path="res://puzzle_elements/PuzzleCamera.gd" type="Script" id=14]
 [ext_resource path="res://ship_code/PureBlackLineEdit.tres" type="StyleBox" id=15]
@@ -23,6 +23,7 @@
 [ext_resource path="res://puzzle_elements/PureGrayBG.svg" type="Texture" id=21]
 [ext_resource path="res://puzzle_elements/2x1Square.tscn" type="PackedScene" id=22]
 [ext_resource path="res://puzzle_elements/1x2Square.tscn" type="PackedScene" id=23]
+[ext_resource path="res://puzzle_elements/ShipEndPoint.tscn" type="PackedScene" id=24]
 
 [sub_resource type="StyleBoxFlat" id=11]
 bg_color = Color( 0.0666667, 0.0666667, 0.0666667, 1 )
@@ -183,10 +184,16 @@ shader = ExtResource( 2 )
 
 [node name="Root" type="Node2D"]
 script = ExtResource( 19 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Camera" type="Camera2D" parent="."]
 current = true
 script = ExtResource( 14 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="UI" type="CanvasLayer" parent="."]
 
@@ -327,18 +334,18 @@ needed_width_tiles = 7
 id = 1
 
 [node name="2x2Square" parent="LevelMoveForward4x" instance=ExtResource( 11 )]
-position = Vector2( 224, 96 )
-
-[node name="ShipEndPoint" type="Sprite" parent="LevelMoveForward4x"]
-position = Vector2( 256, 0 )
-scale = Vector2( 0.25, 0.25 )
-z_index = -30
-texture = ExtResource( 12 )
+position = Vector2( 160, 96 )
 
 [node name="2x2Square2" parent="LevelMoveForward4x" instance=ExtResource( 11 )]
-position = Vector2( 32, -96 )
+position = Vector2( 96, -96 )
 
 [node name="CameraPlace" type="Node2D" parent="LevelMoveForward4x"]
+position = Vector2( 128, 0 )
+
+[node name="ShipEndPoint" parent="LevelMoveForward4x" instance=ExtResource( 24 )]
+position = Vector2( 256, 0 )
+
+[node name="RotGate" parent="LevelMoveForward4x" instance=ExtResource( 12 )]
 position = Vector2( 128, 0 )
 
 [node name="LevelMoveForward2x" type="Node2D" parent="." groups=[
@@ -356,18 +363,15 @@ id = 2
 [node name="2x2Square" parent="LevelMoveForward2x" instance=ExtResource( 11 )]
 position = Vector2( -160, 96 )
 
-[node name="ShipEndPoint" type="Sprite" parent="LevelMoveForward2x"]
-position = Vector2( -128, 0 )
-rotation = 3.14159
-scale = Vector2( 0.25, 0.25 )
-z_index = -30
-texture = ExtResource( 12 )
-
 [node name="2x2Square2" parent="LevelMoveForward2x" instance=ExtResource( 11 )]
 position = Vector2( 32, -96 )
 
 [node name="CameraPlace" type="Node2D" parent="LevelMoveForward2x"]
 position = Vector2( -64, 0 )
+
+[node name="ShipEndPoint" parent="LevelMoveForward2x" instance=ExtResource( 24 )]
+position = Vector2( -128, 0 )
+rotation = 3.14159
 
 [node name="LevelTurnLefts1" type="Node2D" parent="." groups=[
 "Levels",
@@ -382,18 +386,21 @@ id = 3
 [node name="2x2Square" parent="LevelTurnLefts1" instance=ExtResource( 11 )]
 position = Vector2( 224, 96 )
 
-[node name="ShipEndPoint" type="Sprite" parent="LevelTurnLefts1"]
-position = Vector2( 128, -128 )
-rotation = -1.5708
-scale = Vector2( 0.25, 0.25 )
-z_index = -30
-texture = ExtResource( 12 )
-
 [node name="2x2Square2" parent="LevelTurnLefts1" instance=ExtResource( 11 )]
 position = Vector2( 32, -96 )
 
 [node name="CameraPlace" type="Node2D" parent="LevelTurnLefts1"]
 position = Vector2( 64, -64 )
+
+[node name="ShipEndPoint" parent="LevelTurnLefts1" instance=ExtResource( 24 )]
+position = Vector2( 128, -128 )
+rotation = -1.5708
+
+[node name="RotGate" parent="LevelTurnLefts1" instance=ExtResource( 12 )]
+position = Vector2( 256, 0 )
+
+[node name="RotGate2" parent="LevelTurnLefts1" instance=ExtResource( 12 )]
+position = Vector2( 64, -192 )
 
 [node name="LevelTurnLefts2" type="Node2D" parent="." groups=[
 "Levels",
@@ -408,18 +415,18 @@ id = 4
 [node name="2x2Square" parent="LevelTurnLefts2" instance=ExtResource( 11 )]
 position = Vector2( 224, 96 )
 
-[node name="ShipEndPoint" type="Sprite" parent="LevelTurnLefts2"]
-position = Vector2( 0, -128 )
-rotation = 3.14159
-scale = Vector2( 0.25, 0.25 )
-z_index = -30
-texture = ExtResource( 12 )
-
 [node name="CameraPlace" type="Node2D" parent="LevelTurnLefts2"]
 position = Vector2( 64, -64 )
 
 [node name="2x`Square" parent="LevelTurnLefts2" instance=ExtResource( 22 )]
 position = Vector2( 32, -64 )
+
+[node name="ShipEndPoint" parent="LevelTurnLefts2" instance=ExtResource( 24 )]
+position = Vector2( 0, -128 )
+rotation = 3.14159
+
+[node name="RotGate3" parent="LevelTurnLefts2" instance=ExtResource( 12 )]
+position = Vector2( 64, -128 )
 
 [node name="LevelTurnRight" type="Node2D" parent="." groups=[
 "Levels",
@@ -436,18 +443,15 @@ id = 5
 [node name="2x2Square" parent="LevelTurnRight" instance=ExtResource( 11 )]
 position = Vector2( 160, 96 )
 
-[node name="ShipEndPoint" type="Sprite" parent="LevelTurnRight"]
-position = Vector2( 64, 192 )
-rotation = 1.5708
-scale = Vector2( 0.25, 0.25 )
-z_index = -30
-texture = ExtResource( 12 )
-
 [node name="CameraPlace" type="Node2D" parent="LevelTurnRight"]
 position = Vector2( 32, 96 )
 
 [node name="2x`Square" parent="LevelTurnRight" instance=ExtResource( 22 )]
 position = Vector2( -96, 192 )
+
+[node name="ShipEndPoint" parent="LevelTurnRight" instance=ExtResource( 24 )]
+position = Vector2( 64, 192 )
+rotation = 1.5708
 
 [node name="LevelTurnLTurnR" type="Node2D" parent="." groups=[
 "Levels",
@@ -463,21 +467,19 @@ id = 6
 [node name="2x2Square" parent="LevelTurnLTurnR" instance=ExtResource( 11 )]
 position = Vector2( 32, -96 )
 
-[node name="ShipEndPoint" type="Sprite" parent="LevelTurnLTurnR"]
-position = Vector2( 256, -128 )
-scale = Vector2( 0.25, 0.25 )
-z_index = -30
-texture = ExtResource( 12 )
-
 [node name="2x2Square2" parent="LevelTurnLTurnR" instance=ExtResource( 11 )]
 position = Vector2( 224, -32 )
 
 [node name="CameraPlace" type="Node2D" parent="LevelTurnLTurnR"]
 position = Vector2( 128, -64 )
 
+[node name="ShipEndPoint" parent="LevelTurnLTurnR" instance=ExtResource( 24 )]
+position = Vector2( 256, -128 )
+
 [node name="LevelTurnLTurnR2" type="Node2D" parent="." groups=[
 "Levels",
 ]]
+visible = false
 script = ExtResource( 13 )
 __meta__ = {
 "_edit_lock_": true
@@ -492,12 +494,6 @@ position = Vector2( 160, 32 )
 [node name="2x2Square3" parent="LevelTurnLTurnR2" instance=ExtResource( 11 )]
 position = Vector2( 160, -224 )
 
-[node name="ShipEndPoint" type="Sprite" parent="LevelTurnLTurnR2"]
-position = Vector2( 128, -128 )
-scale = Vector2( 0.25, 0.25 )
-z_index = -30
-texture = ExtResource( 12 )
-
 [node name="2x2Square2" parent="LevelTurnLTurnR2" instance=ExtResource( 11 )]
 position = Vector2( -32, -96 )
 
@@ -510,7 +506,10 @@ position = Vector2( 64, -160 )
 [node name="2x1" parent="LevelTurnLTurnR2" instance=ExtResource( 22 )]
 position = Vector2( 224, -64 )
 
-[node name="LevelTurboRLplusF" type="Node2D" parent="." groups=[
+[node name="ShipEndPoint" parent="LevelTurnLTurnR2" instance=ExtResource( 24 )]
+position = Vector2( 128, -128 )
+
+[node name="LevelTurbo1" type="Node2D" parent="." groups=[
 "Levels",
 ]]
 visible = false
@@ -519,26 +518,277 @@ __meta__ = {
 "_edit_lock_": true
 }
 needed_width_tiles = 7
+needed_height_tiles = 7
+id = 8
 
-[node name="2x2Square" parent="LevelTurboRLplusF" instance=ExtResource( 11 )]
-position = Vector2( 224, 32 )
+[node name="2x2Square" parent="LevelTurbo1" instance=ExtResource( 11 )]
+position = Vector2( 160, -96 )
 
-[node name="ShipEndPoint" type="Sprite" parent="LevelTurboRLplusF"]
-position = Vector2( 320, 128 )
-scale = Vector2( 0.25, 0.25 )
-z_index = -30
-texture = ExtResource( 12 )
+[node name="2x2Square2" parent="LevelTurbo1" instance=ExtResource( 11 )]
+position = Vector2( 96, -224 )
+
+[node name="CameraPlace" type="Node2D" parent="LevelTurbo1"]
+position = Vector2( 128, -128 )
+
+[node name="ShipEndPoint" parent="LevelTurbo1" instance=ExtResource( 24 )]
+position = Vector2( 256, -256 )
+rotation = -1.5708
+
+[node name="RotGate" parent="LevelTurbo1" instance=ExtResource( 12 )]
+position = Vector2( 128, 0 )
+
+[node name="RotGate2" parent="LevelTurbo1" instance=ExtResource( 12 )]
+position = Vector2( 256, -128 )
+
+[node name="LevelTurbo2" type="Node2D" parent="." groups=[
+"Levels",
+]]
+visible = false
+script = ExtResource( 13 )
+__meta__ = {
+"_edit_lock_": true
+}
+needed_width_tiles = 7
+needed_height_tiles = 7
+initial_rotation = 90
+id = 9
+
+[node name="ShipEndPoint" parent="LevelTurbo2" instance=ExtResource( 24 )]
+position = Vector2( -256, 128 )
+rotation = -1.5708
+
+[node name="2x2Square2" parent="LevelTurbo2" instance=ExtResource( 11 )]
+position = Vector2( -96, 96 )
+
+[node name="CameraPlace" type="Node2D" parent="LevelTurbo2"]
+position = Vector2( -128, 128 )
+
+[node name="1x2Square" parent="LevelTurbo2" instance=ExtResource( 23 )]
+position = Vector2( -64, -32 )
+
+[node name="2x1Square" parent="LevelTurbo2" instance=ExtResource( 22 )]
+position = Vector2( -160, 192 )
+
+[node name="LevelSL" type="Node2D" parent="." groups=[
+"Levels",
+]]
+visible = false
+script = ExtResource( 13 )
+__meta__ = {
+"_edit_lock_": true
+}
+needed_width_tiles = 9
+id = 10
+
+[node name="ShipEndPoint" parent="LevelSL" instance=ExtResource( 24 )]
+position = Vector2( 384, -128 )
+
+[node name="2x2Square2" parent="LevelSL" instance=ExtResource( 11 )]
+position = Vector2( -32, -160 )
+
+[node name="CameraPlace" type="Node2D" parent="LevelSL"]
+position = Vector2( 192, -64 )
+
+[node name="1x2Square" parent="LevelSL" instance=ExtResource( 23 )]
+position = Vector2( 192, -224 )
+
+[node name="1x2Square2" parent="LevelSL" instance=ExtResource( 23 )]
+position = Vector2( 384, -288 )
+
+[node name="2x1Square" parent="LevelSL" instance=ExtResource( 22 )]
+position = Vector2( 224, 0 )
+
+[node name="2x1Square2" parent="LevelSL" instance=ExtResource( 22 )]
+position = Vector2( 352, -64 )
+
+[node name="LevelSLSR" type="Node2D" parent="." groups=[
+"Levels",
+]]
+visible = false
+script = ExtResource( 13 )
+__meta__ = {
+"_edit_lock_": true
+}
+needed_width_tiles = 8
+needed_height_tiles = 4
+id = 11
+
+[node name="ShipEndPoint" parent="LevelSLSR" instance=ExtResource( 24 )]
+position = Vector2( 320, 64 )
+
+[node name="2x2Square2" parent="LevelSLSR" instance=ExtResource( 11 )]
+position = Vector2( 288, -32 )
+
+[node name="CameraPlace" type="Node2D" parent="LevelSLSR"]
+position = Vector2( 160, 32 )
+
+[node name="1x2Square" parent="LevelSLSR" instance=ExtResource( 23 )]
+position = Vector2( 384, -96 )
+
+[node name="1x2Square2" parent="LevelSLSR" instance=ExtResource( 23 )]
+position = Vector2( 128, 32 )
+
+[node name="2x1Square" parent="LevelSLSR" instance=ExtResource( 22 )]
+position = Vector2( -32, 64 )
+
+[node name="2x1Square2" parent="LevelSLSR" instance=ExtResource( 22 )]
+position = Vector2( 96, 128 )
+
+[node name="LevelSR" type="Node2D" parent="." groups=[
+"Levels",
+]]
+visible = false
+script = ExtResource( 13 )
+__meta__ = {
+"_edit_lock_": true
+}
+needed_height_tiles = 8
+initial_rotation = -90
+id = 12
+
+[node name="ShipEndPoint" parent="LevelSR" instance=ExtResource( 24 )]
+position = Vector2( 0, -320 )
+rotation = 3.14159
+
+[node name="2x2Square2" parent="LevelSR" instance=ExtResource( 11 )]
+position = Vector2( -160, -288 )
+
+[node name="CameraPlace" type="Node2D" parent="LevelSR"]
+position = Vector2( 0, -160 )
+
+[node name="1x2Square" parent="LevelSR" instance=ExtResource( 23 )]
+position = Vector2( 0, -160 )
+
+[node name="1x2Square2" parent="LevelSR" instance=ExtResource( 23 )]
+position = Vector2( -64, -96 )
+
+[node name="2x1Square" parent="LevelSR" instance=ExtResource( 22 )]
+position = Vector2( 160, -256 )
+
+[node name="2x1Square2" parent="LevelSR" instance=ExtResource( 22 )]
+position = Vector2( 96, -320 )
+
+[node name="LevelTurboRLplusF" type="Node2D" parent="." groups=[
+"Levels",
+]]
+visible = false
+script = ExtResource( 13 )
+__meta__ = {
+"_edit_lock_": true
+}
+needed_width_tiles = 8
+id = 13
 
 [node name="2x2Square2" parent="LevelTurboRLplusF" instance=ExtResource( 11 )]
 position = Vector2( 32, 96 )
 
+[node name="2x2Square3" parent="LevelTurboRLplusF" instance=ExtResource( 11 )]
+position = Vector2( 224, 32 )
+
 [node name="CameraPlace" type="Node2D" parent="LevelTurboRLplusF"]
+position = Vector2( 160, 64 )
+
+[node name="ShipEndPoint" parent="LevelTurboRLplusF" instance=ExtResource( 24 )]
+position = Vector2( 320, 128 )
+
+[node name="1x2Square" parent="LevelTurboRLplusF" instance=ExtResource( 23 )]
+position = Vector2( 192, -96 )
+
+[node name="2x1Square" parent="LevelTurboRLplusF" instance=ExtResource( 22 )]
+position = Vector2( 352, 64 )
+
+[node name="2x1Square2" parent="LevelTurboRLplusF" instance=ExtResource( 22 )]
+position = Vector2( -96, 64 )
+
+[node name="1x2Square2" parent="LevelTurboRLplusF" instance=ExtResource( 12 )]
 position = Vector2( 128, 64 )
 
-[connection signal="pressed" from="UI/Root/PlayButton" to="Ship" method="play"]
-[connection signal="pressed" from="UI/Root/PlayButton" to="UI/Root/StopButton" method="_vis"]
+[node name="LevelTurboOffset" type="Node2D" parent="." groups=[
+"Levels",
+]]
+visible = false
+script = ExtResource( 13 )
+__meta__ = {
+"_edit_lock_": true
+}
+needed_width_tiles = 8
+needed_height_tiles = 9
+initial_rotation = 180
+id = 14
+
+[node name="2x2Square2" parent="LevelTurboOffset" instance=ExtResource( 11 )]
+position = Vector2( -160, 224 )
+
+[node name="2x2Square3" parent="LevelTurboOffset" instance=ExtResource( 11 )]
+position = Vector2( -224, 96 )
+
+[node name="CameraPlace" type="Node2D" parent="LevelTurboOffset"]
+position = Vector2( -160, 192 )
+
+[node name="ShipEndPoint" parent="LevelTurboOffset" instance=ExtResource( 24 )]
+position = Vector2( -320, 384 )
+rotation = 1.5708
+
+[node name="1x2Square" parent="LevelTurboOffset" instance=ExtResource( 23 )]
+position = Vector2( -384, 224 )
+
+[node name="1x2Square5" parent="LevelTurboOffset" instance=ExtResource( 23 )]
+position = Vector2( -256, -96 )
+
+[node name="1x2Square6" parent="LevelTurboOffset" instance=ExtResource( 23 )]
+position = Vector2( -128, -160 )
+
+[node name="2x1Square" parent="LevelTurboOffset" instance=ExtResource( 22 )]
+position = Vector2( -416, -64 )
+
+[node name="2x1Square2" parent="LevelTurboOffset" instance=ExtResource( 22 )]
+position = Vector2( -96, 64 )
+
+[node name="1x2Square2" parent="LevelTurboOffset" instance=ExtResource( 12 )]
+position = Vector2( -320, 192 )
+
+[node name="1x2Square3" parent="LevelTurboOffset" instance=ExtResource( 12 )]
+position = Vector2( -320, 256 )
+
+[node name="1x2Square4" parent="LevelTurboOffset" instance=ExtResource( 12 )]
+position = Vector2( -320, 128 )
+
+[node name="LevelTurboOffsetSTrafe" type="Node2D" parent="." groups=[
+"Levels",
+]]
+script = ExtResource( 13 )
+__meta__ = {
+"_edit_lock_": true
+}
+needed_height_tiles = 10
+id = 15
+
+[node name="2x2Square2" parent="LevelTurboOffsetSTrafe" instance=ExtResource( 11 )]
+position = Vector2( 160, -352 )
+
+[node name="2x2Square3" parent="LevelTurboOffsetSTrafe" instance=ExtResource( 11 )]
+position = Vector2( 160, -224 )
+
+[node name="CameraPlace" type="Node2D" parent="LevelTurboOffsetSTrafe"]
+position = Vector2( 0, -224 )
+
+[node name="ShipEndPoint" parent="LevelTurboOffsetSTrafe" instance=ExtResource( 24 )]
+position = Vector2( 0, -448 )
+rotation = -1.5708
+
+[node name="1x2Square5" parent="LevelTurboOffsetSTrafe" instance=ExtResource( 23 )]
+position = Vector2( 192, -480 )
+
+[node name="1x2Square6" parent="LevelTurboOffsetSTrafe" instance=ExtResource( 23 )]
+position = Vector2( 192, -96 )
+
+[node name="2x1Square" parent="LevelTurboOffsetSTrafe" instance=ExtResource( 22 )]
+position = Vector2( 32, -256 )
+
 [connection signal="pressed" from="UI/Root/PlayButton" to="UI/Root/PlayButton" method="_vis"]
-[connection signal="pressed" from="UI/Root/StopButton" to="Ship" method="reset_self"]
-[connection signal="pressed" from="UI/Root/StopButton" to="UI/Root/StopButton" method="_vis"]
+[connection signal="pressed" from="UI/Root/PlayButton" to="UI/Root/StopButton" method="_vis"]
+[connection signal="pressed" from="UI/Root/PlayButton" to="Ship" method="play"]
 [connection signal="pressed" from="UI/Root/StopButton" to="UI/Root/PlayButton" method="_vis"]
+[connection signal="pressed" from="UI/Root/StopButton" to="UI/Root/StopButton" method="_vis"]
+[connection signal="pressed" from="UI/Root/StopButton" to="Ship" method="reset_self"]
 [connection signal="pressed" from="UI/Root/BackButton" to="UI/Root/BackButton" method="_on_BackButton_pressed"]

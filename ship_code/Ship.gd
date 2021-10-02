@@ -10,6 +10,8 @@ enum CodeInternal {
 	TurnRight,
 	EnableTurbo,
 	DisableTurbo,
+	StrafeLeft,
+	StrafeRight,
 }
 
 var code_dict = {
@@ -17,7 +19,9 @@ var code_dict = {
 	"3F" : CodeInternal.TurnLeft,
 	"77" : CodeInternal.TurnRight,
 	"53" : CodeInternal.EnableTurbo,
-	"E9" : CodeInternal.DisableTurbo
+	"E9" : CodeInternal.DisableTurbo,
+	"10" : CodeInternal.StrafeLeft,
+	"B7" : CodeInternal.StrafeRight,
 }
 
 var current_code = CodeInternal.None
@@ -40,7 +44,10 @@ var cs_root_pos = Vector2.ZERO
 export var cs_wiggle_amount = 0
 
 var cs_rotate_amount = 0
+var cs_rot_vel = 0
 
+func _ready():
+	GS.ship = self
 
 func finish_anim_code():
 	if current_code == CodeInternal.PlayAnAnimation:
@@ -114,10 +121,26 @@ func init_code_state():
 		cs_target_pos = polar2cartesian(64 * turbo_multiplier_state, rotation) + position
 		evaluate_target_pos()
 		
+	if current_code == CodeInternal.StrafeLeft:
+		cs_target_pos = polar2cartesian(64, deg2rad(rotation_degrees - 90)) + position
+		evaluate_target_pos()
+		
+		cs_rotate_amount = -90
+		cs_rot_vel = 180 * (move_vel / 64)
+		
+	if current_code == CodeInternal.StrafeRight:
+		cs_target_pos = polar2cartesian(64, deg2rad(rotation_degrees + 90)) + position
+		evaluate_target_pos()
+		
+		cs_rotate_amount = 90
+		cs_rot_vel = 180 * (move_vel / 64)
+		
 	if current_code == CodeInternal.TurnRight:
+		cs_rot_vel = rot_vel
 		cs_rotate_amount = 90
 		
 	if current_code == CodeInternal.TurnLeft:
+		cs_rot_vel = rot_vel
 		cs_rotate_amount = -90
 		
 	if current_code == CodeInternal.EnableTurbo:
@@ -144,6 +167,15 @@ func init_code_state():
 			$AnimationPlayer.stop()
 			$AnimationPlayer.play("TurnOffTurbo")
 		
+func is_motion_code(c):
+	return c == CodeInternal.MoveForward or c == CodeInternal.StrafeLeft or c == CodeInternal.StrafeRight
+		
+func is_turn_code(c):
+	return c == CodeInternal.TurnLeft or\
+		c == CodeInternal.TurnRight #or\
+		#c == CodeInternal.StrafeLeft or\
+		#c == CodeInternal.StrafeRight
+		
 func code_process(delta):
 	if current_code == CodeInternal.None:
 		get_next_code()
@@ -158,22 +190,24 @@ func code_process(delta):
 	# It's fine to execute the new code after we load it from the string
 	# in the same frame.
 		
-	if current_code == CodeInternal.MoveForward:
+	if is_motion_code(current_code):
 		var velocity = (cs_target_pos - position).normalized() * move_vel * turbo_multiplier_state
 		position += velocity * delta
 		if(cs_target_pos.distance_to(position) <= velocity.length() * delta * 1.5):
 			position = cs_target_pos
 			current_code = CodeInternal.None
 			
-	if current_code == CodeInternal.TurnLeft or current_code == CodeInternal.TurnRight:
+	if is_turn_code(current_code):
 		var start_s = sign(cs_rotate_amount)
 		
-		var amount = rot_vel * start_s * delta * turbo_multiplier_state
+		var amount = cs_rot_vel * start_s * delta * turbo_multiplier_state
 		rotate(deg2rad(amount))
 		cs_rotate_amount -= amount
 		
 		if start_s != sign(cs_rotate_amount):
 			rotation_degrees = round(rotation_degrees / 90.0) * 90.0
+			
+			#if current_code == CodeInternal.TurnLeft or current_code == CodeInternal.TurnRight:
 			current_code = CodeInternal.None
 		
 		

@@ -8,11 +8,14 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 1
 scroll_horizontal_enabled = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="LevelSelect" type="Control" parent="."]
-margin_right = 768.0
-margin_bottom = 1000.0
-rect_min_size = Vector2( 768, 1000 )
+margin_right = 896.0
+margin_bottom = 2000.0
+rect_min_size = Vector2( 896, 2000 )
 focus_mode = 2
 mouse_filter = 2
 script = ExtResource( 2 )
@@ -21,59 +24,123 @@ __meta__ = {
 }
 
 [node name="LevelButton" parent="LevelSelect" instance=ExtResource( 1 )]
-margin_left = 224.0
+margin_left = 288.0
 margin_top = 32.0
-margin_right = 352.0
+margin_right = 416.0
 margin_bottom = 160.0
+helper_str = "0A"
 
 [node name="LevelButton5" parent="LevelSelect" instance=ExtResource( 1 )]
-margin_left = 416.0
+margin_left = 480.0
 margin_top = 32.0
-margin_right = 544.0
+margin_right = 608.0
 margin_bottom = 160.0
 level_id = 2
+helper_str = "0A"
 
 [node name="LevelButton2" parent="LevelSelect" instance=ExtResource( 1 )]
-margin_left = 32.0
+margin_left = 96.0
 margin_top = 224.0
-margin_right = 160.0
+margin_right = 224.0
 margin_bottom = 352.0
 level_id = 3
+helper_str = "3F"
 
 [node name="LevelButton3" parent="LevelSelect" instance=ExtResource( 1 )]
-margin_left = 224.0
+margin_left = 288.0
 margin_top = 224.0
-margin_right = 352.0
+margin_right = 416.0
 margin_bottom = 352.0
 level_id = 4
+helper_str = "3F"
 
 [node name="LevelButton4" parent="LevelSelect" instance=ExtResource( 1 )]
-margin_left = 608.0
+margin_left = 672.0
 margin_top = 224.0
-margin_right = 736.0
+margin_right = 800.0
 margin_bottom = 352.0
 level_id = 5
+helper_str = "77"
 
 [node name="LevelButton6" parent="LevelSelect" instance=ExtResource( 1 )]
-margin_left = 160.0
+margin_left = 224.0
 margin_top = 416.0
-margin_right = 288.0
+margin_right = 352.0
 margin_bottom = 544.0
 level_id = 6
+helper_str = "3F,77"
 
 [node name="LevelButton7" parent="LevelSelect" instance=ExtResource( 1 )]
-margin_left = 352.0
+margin_left = 416.0
 margin_top = 416.0
-margin_right = 480.0
+margin_right = 544.0
 margin_bottom = 544.0
 level_id = 7
+helper_str = "3F,77"
 
-[node name="LevelButton10" parent="LevelSelect" instance=ExtResource( 1 )]
-margin_left = 608.0
+[node name="Level8" parent="LevelSelect" instance=ExtResource( 1 )]
+margin_left = 736.0
 margin_top = 608.0
-margin_right = 736.0
+margin_right = 864.0
 margin_bottom = 736.0
 level_id = 8
+helper_str = "53"
+
+[node name="Level9" parent="LevelSelect" instance=ExtResource( 1 )]
+margin_left = 736.0
+margin_top = 800.0
+margin_right = 864.0
+margin_bottom = 928.0
+level_id = 9
+helper_str = "53,E9"
+
+[node name="Level10" parent="LevelSelect" instance=ExtResource( 1 )]
+margin_left = 96.0
+margin_top = 704.0
+margin_right = 224.0
+margin_bottom = 832.0
+level_id = 10
+helper_str = "10"
+
+[node name="Level11" parent="LevelSelect" instance=ExtResource( 1 )]
+margin_left = 288.0
+margin_top = 704.0
+margin_right = 416.0
+margin_bottom = 832.0
+level_id = 11
+helper_str = "10,B7"
+
+[node name="Level12" parent="LevelSelect" instance=ExtResource( 1 )]
+margin_left = 480.0
+margin_top = 704.0
+margin_right = 608.0
+margin_bottom = 832.0
+level_id = 12
+helper_str = "B7"
+
+[node name="Level13" parent="LevelSelect" instance=ExtResource( 1 )]
+margin_left = 544.0
+margin_top = 928.0
+margin_right = 672.0
+margin_bottom = 1056.0
+level_id = 13
+helper_str = "53,E9"
+
+[node name="Level14" parent="LevelSelect" instance=ExtResource( 1 )]
+margin_left = 544.0
+margin_top = 1120.0
+margin_right = 672.0
+margin_bottom = 1248.0
+level_id = 14
+helper_str = "53,E9"
+
+[node name="Level15" parent="LevelSelect" instance=ExtResource( 1 )]
+margin_left = 192.0
+margin_top = 1024.0
+margin_right = 320.0
+margin_bottom = 1152.0
+level_id = 15
+helper_str = "10,53,B7"
 
 [node name="ReferenceRect" type="ReferenceRect" parent="LevelSelect"]
 anchor_right = 1.0

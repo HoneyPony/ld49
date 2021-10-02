@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="64"
+   height="64"
+   viewBox="0 0 16.93312 16.93312"
+   version="1.1"
+   id="svg4584"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   sodipodi:docname="RotationGate.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview4586"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="px"
+     showgrid="false"
+     units="px"
+     width="64px"
+     inkscape:zoom="6.5"
+     inkscape:cx="38.384615"
+     inkscape:cy="65.307692"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs4581" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <circle
+       style="fill:none;stroke:#012b00;stroke-width:0.881032"
+       id="path37393"
+       cx="8.4869118"
+       cy="-8.4869127"
+       r="8.0260439"
+       transform="rotate(90)" />
+    <rect
+       style="fill:#00ff00;stroke:none;stroke-width:0.930514"
+       id="rect37497"
+       width="1.05832"
+       height="16.933121"
+       x="0.020352785"
+       y="-16.953472"
+       transform="rotate(90)" />
+    <rect
+       style="fill:#00ff00;stroke:none;stroke-width:0.657973"
+       id="rect37615"
+       width="0.52916002"
+       height="16.933121"
+       x="0.54593986"
+       y="-17.023174"
+       transform="rotate(93.707201)" />
+    <rect
+       style="fill:#00ff00;stroke:none;stroke-width:0.930514"
+       id="rect38226"
+       width="1.05832"
+       height="16.933121"
+       x="15.895152"
+       y="-16.953472"
+       transform="rotate(90)" />
+    <rect
+       style="fill:#00ff00;stroke:none;stroke-width:0.657973"
+       id="rect38228"
+       width="0.52916002"
+       height="16.933121"
+       x="15.855703"
+       y="-15.813766"
+       transform="rotate(85.888469)" />
+    <path
+       style="fill:none;stroke:#012b00;stroke-width:0.92603;stroke-opacity:1"
+       d="M 4.6403261,3.9890521 12.048567,8.4665598 4.1518709,13.025477"
+       id="path38380"
+       sodipodi:nodetypes="ccc" />
+  </g>
+</svg>

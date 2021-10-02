@@ -8,7 +8,7 @@
    version="1.1"
    id="svg4584"
    inkscape:version="1.1 (c68e22c387, 2021-05-23)"
-   sodipodi:docname="Grid.svg"
+   sodipodi:docname="RotationGate_Top.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -25,9 +25,9 @@
      showgrid="false"
      units="px"
      width="64px"
-     inkscape:zoom="5.9295174"
-     inkscape:cx="58.942402"
-     inkscape:cy="34.488473"
+     inkscape:zoom="6.5"
+     inkscape:cx="38.384615"
+     inkscape:cy="65.307692"
      inkscape:window-width="1920"
      inkscape:window-height="1017"
      inkscape:window-x="-8"
@@ -41,11 +41,36 @@
      inkscape:groupmode="layer"
      id="layer1">
     <rect
-       style="fill:none;stroke:#012b00;stroke-width:0.406362;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="rect8788"
-       width="16.526758"
-       height="16.526758"
-       x="0.20318085"
-       y="0.20318085" />
+       style="fill:#00ff00;stroke:none;stroke-width:0.930514"
+       id="rect37497"
+       width="1.05832"
+       height="16.933121"
+       x="0.020352785"
+       y="-16.953472"
+       transform="rotate(90)" />
+    <rect
+       style="fill:#00ff00;stroke:none;stroke-width:0.657973"
+       id="rect37615"
+       width="0.52916002"
+       height="16.933121"
+       x="0.54593986"
+       y="-17.023174"
+       transform="rotate(93.707201)" />
+    <rect
+       style="fill:#00ff00;stroke:none;stroke-width:0.930514"
+       id="rect38226"
+       width="1.05832"
+       height="16.933121"
+       x="15.895152"
+       y="-16.953472"
+       transform="rotate(90)" />
+    <rect
+       style="fill:#00ff00;stroke:none;stroke-width:0.657973"
+       id="rect38228"
+       width="0.52916002"
+       height="16.933121"
+       x="15.855703"
+       y="-15.813766"
+       transform="rotate(85.888469)" />
   </g>
 </svg>
