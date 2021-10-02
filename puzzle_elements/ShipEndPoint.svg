@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="68"
+   height="68"
+   viewBox="0 0 17.99144 17.99144"
+   version="1.1"
+   id="svg4584"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   sodipodi:docname="ShipEndPoint.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview4586"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="px"
+     showgrid="false"
+     units="px"
+     width="64px"
+     inkscape:zoom="5.9295174"
+     inkscape:cx="13.744795"
+     inkscape:cy="44.944636"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs4581" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="fill:none;stroke:#aa0000;stroke-width:0.79374;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 3.9204034,3.1171914 16.503478,8.828658 3.2064701,13.647708 5.2590284,9.2748661 Z"
+       id="path4651"
+       sodipodi:nodetypes="ccccc" />
+    <path
+       style="fill:none;stroke:#aa0000;stroke-width:0.79374;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 6.1960659,5.9729246 7.9362785,8.560933 11.550566,8.4270703 Z"
+       id="path5357"
+       sodipodi:nodetypes="cccc" />
+    <rect
+       style="fill:none;stroke:#aa0000;stroke-width:0.79374;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect8788"
+       width="16.526758"
+       height="16.526758"
+       x="0.73234099"
+       y="0.73234099" />
+  </g>
+</svg>
