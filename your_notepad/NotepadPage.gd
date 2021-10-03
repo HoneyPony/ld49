@@ -12,10 +12,12 @@ func _ready():
 	$Page5.visible = false
 	$Page6.visible = false
 	
+	setup_pages()
+	
 
 func build_pages():
-	pages = [$Page1]
-	last_page = 1
+	pages = [$PageTitle, $PageHelp1, $PageHelp2, $PageHelp3, $PageTB, $Page1]
+	last_page = 6
 	
 	if GS.has_L:
 		pages.append($Page2)
@@ -43,7 +45,7 @@ func turn(dir):
 
 	page = pnew
 	
-func _process(delta):
+func setup_pages():
 	$Prev.visible = page > 1
 	$Next.visible = page < last_page
 	
@@ -53,3 +55,6 @@ func _process(delta):
 	for p in pages:
 		p.visible = (n == 0)
 		n -= 1
+		
+func _process(delta):
+	setup_pages()

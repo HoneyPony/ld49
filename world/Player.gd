@@ -19,6 +19,8 @@ func get_move_dir():
 	if Input.is_action_pressed("p_right"):
 		d += transform.basis.x
 		
+	if d.length() > 0:
+		$Camera.accum_time = 0
 	return d.normalized()
 
 var velocity = Vector3.ZERO
@@ -45,17 +47,22 @@ func rotate_on_mouse(mouse_motion):
 	
 	$Camera.rotation.x = cam
 	
+	$Camera.accum_mouse += mouse.length()
+	if mouse.length() > 0.0001:
+		$Camera.accum_time = 0
+	
 	pass
 	
 
 var last_mouse_place = Vector2.ZERO
 
 func handle_mouse_things(mouse_motion):
-	if is_paused or YourStuff.showing_stuff:
+	if is_paused or YourStuff.showing_stuff or $Camera.is_diary_mode:
 		ignore_next_mouse_frame = true
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 		return
 		
+	
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	
 #	var mouse = get_viewport().get_mouse_position()
@@ -85,6 +92,8 @@ func _input(event: InputEvent):
 	
 #	if event is InputEventAction:
 #		if event.action == "open_tablet":
+#			$Camera.accum_tab += 1
+			
 #			if YourStuff.showing_stuff:
 #				Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	
@@ -117,6 +126,9 @@ func _physics_process(delta):
 		velocity.y = max(velocity.y - gravity * delta, -30)
 		
 		velocity = move_and_slide(velocity)
+		
+		$Camera.accum_move += velocity.length() * delta
+		
 		
 	handle_oob()
 		
