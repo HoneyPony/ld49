@@ -25,7 +25,12 @@ var has_Turb = false
 var has_SL = false
 var has_SR = false
 
+var has_DirB = false
+
 var second_ls_load = false
+
+# THIS ONE IS NOT RESET!!!
+var very_first_load = true
 
 func reset_GS():
 	hover_prev_button = false
@@ -76,6 +81,9 @@ func activate_ability(which):
 		has_SL = true
 	if which == 4:
 		has_SR = true
+		
+	if which == 5:
+		has_DirB = true
 
 var current_level_id = -1
 
@@ -152,3 +160,10 @@ func is_level_avail(level):
 		return false
 		
 	return true
+	
+func _ready():
+	pause_mode = PAUSE_MODE_PROCESS
+	
+func _process(delta):
+	if Input.is_action_just_pressed("fullscreen"):
+		OS.window_fullscreen = not OS.window_fullscreen

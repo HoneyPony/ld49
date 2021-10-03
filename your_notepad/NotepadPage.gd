@@ -11,6 +11,7 @@ func _ready():
 	$Page4.visible = false
 	$Page5.visible = false
 	$Page6.visible = false
+	$Page7.visible = false
 	
 	setup_pages()
 	
@@ -37,6 +38,10 @@ func build_pages():
 		
 	if GS.has_SR:
 		pages.append($Page6)
+		last_page += 1
+		
+	if GS.has_DirB:
+		pages.append($Page7)
 		last_page += 1
 		
 	pages.append($PageEnd)

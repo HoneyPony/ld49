@@ -1,7 +1,7 @@
 extends ColorRect
 
 func are_all_levels_won():
-	return true
+	#return true
 	
 	for l in GS.levels:
 		if not l.has_won:

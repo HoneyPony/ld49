@@ -42,6 +42,21 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="PROTO" type="Label" parent="."]
+visible = false
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -285.5
+margin_top = 503.769
+margin_right = 285.5
+margin_bottom = 567.769
+custom_fonts/font = SubResource( 1 )
+text = "loading..."
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="SunModel" parent="." instance=ExtResource( 2 )]
 
 [node name="Camera" type="Camera" parent="."]
