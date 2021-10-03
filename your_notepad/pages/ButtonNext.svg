@@ -2,9 +2,9 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="155"
-   height="60"
-   viewBox="0 0 41.0099 15.8748"
+   width="198.04695"
+   height="69.271645"
+   viewBox="0 0 52.399262 18.327892"
    version="1.1"
    id="svg4584"
    inkscape:version="1.1 (c68e22c387, 2021-05-23)"
@@ -29,31 +29,36 @@
      units="px"
      width="64px"
      inkscape:zoom="1.625"
-     inkscape:cx="82.153846"
-     inkscape:cy="162.15385"
+     inkscape:cx="92"
+     inkscape:cy="170.76923"
      inkscape:window-width="1920"
      inkscape:window-height="1017"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
      inkscape:current-layer="layer1"
-     inkscape:snap-global="false" />
+     inkscape:snap-global="false"
+     fit-margin-top="5"
+     fit-margin-left="5"
+     fit-margin-right="5"
+     fit-margin-bottom="5" />
   <defs
      id="defs4581" />
   <g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
-     id="layer1">
+     id="layer1"
+     transform="translate(2.6114832,2.2487861)">
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.5832px;line-height:1.25;font-family:'Princess Sofia';-inkscape-font-specification:'Princess Sofia';fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458"
-       x="3.868237"
-       y="10.39325"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.5832px;line-height:1.25;font-family:Handlee;-inkscape-font-specification:Handlee;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.26458"
+       x="2.077234"
+       y="10.718887"
        id="text51255-8"><tspan
          sodipodi:role="line"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Princess Sofia';-inkscape-font-specification:'Princess Sofia';stroke-width:0.26458"
-         x="3.868237"
-         y="10.39325"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Handlee;-inkscape-font-specification:Handlee;stroke-width:0.26458;fill:#ffffff"
+         x="2.077234"
+         y="10.718887"
          id="tspan2597-0">Next page</tspan></text>
     <text
        xml:space="preserve"
@@ -66,5 +71,9 @@
          style="stroke-width:0.26458"
          x="1.6281847"
          y="32.238056" /></text>
+    <path
+       style="fill:none;stroke:#ffffff;stroke-width:0.52916"
+       d="M 1.3025477,14.490843 47.868629,14.328025 48.194266,-0.65127386 -0.97691077,1.1397292 Z"
+       id="path2148" />
   </g>
 </svg>

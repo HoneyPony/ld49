@@ -10,8 +10,8 @@
    inkscape:version="1.1 (c68e22c387, 2021-05-23)"
    sodipodi:docname="PageHelp3.svg"
    inkscape:export-filename="C:\Users\Bens\Documents\Godot\LD49\your_notepad\pages\PageHelp3.png"
-   inkscape:export-xdpi="96"
-   inkscape:export-ydpi="96"
+   inkscape:export-xdpi="192"
+   inkscape:export-ydpi="192"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -28,9 +28,9 @@
      showgrid="false"
      units="px"
      width="64px"
-     inkscape:zoom="0.57452426"
-     inkscape:cx="871.15556"
-     inkscape:cy="646.62196"
+     inkscape:zoom="0.8125"
+     inkscape:cx="510.15385"
+     inkscape:cy="392"
      inkscape:window-width="1920"
      inkscape:window-height="1017"
      inkscape:window-x="-8"
@@ -76,20 +76,20 @@
          y="32.238056" /></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:10.5832px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458"
-       x="3.4917631"
-       y="12.267114"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.5832px;line-height:1.25;font-family:Handlee;-inkscape-font-specification:Handlee;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458"
+       x="3.166126"
+       y="11.941477"
        id="text82542"><tspan
          sodipodi:role="line"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Princess Sofia';-inkscape-font-specification:'Princess Sofia';stroke-width:0.26458"
-         x="3.4917631"
-         y="12.267114"
-         id="tspan110007">Each launch ship will appear something</tspan><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Handlee;-inkscape-font-specification:Handlee;stroke-width:0.26458"
+         x="3.166126"
+         y="11.941477"
+         id="tspan110893">On the tablet, each launch ship will</tspan><tspan
          sodipodi:role="line"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Princess Sofia';-inkscape-font-specification:'Princess Sofia';stroke-width:0.26458"
-         x="3.4917631"
-         y="26.78874"
-         id="tspan110893">like this on the tablet:</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Handlee;-inkscape-font-specification:Handlee;stroke-width:0.26458"
+         x="3.166126"
+         y="25.170477"
+         id="tspan98130">appear similar to this:</tspan></text>
     <text
        xml:space="preserve"
        transform="scale(0.26458)"
@@ -139,24 +139,24 @@
        id="path111529" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:10.5832px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458"
-       x="3.4358931"
-       y="121.52214"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.3648px;line-height:1.25;font-family:Handlee;-inkscape-font-specification:Handlee;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.23412"
+       x="3.4200537"
+       y="120.53767"
        id="text111669"><tspan
          sodipodi:role="line"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Princess Sofia';-inkscape-font-specification:'Princess Sofia';stroke-width:0.26458"
-         x="3.4358931"
-         y="121.52214"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Handlee;-inkscape-font-specification:Handlee;stroke-width:0.23412"
+         x="3.4200537"
+         y="120.53767"
          id="tspan111667">The goal is to move the ship (colored bright</tspan><tspan
          sodipodi:role="line"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Princess Sofia';-inkscape-font-specification:'Princess Sofia';stroke-width:0.26458"
-         x="3.4358931"
-         y="136.04376"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Handlee;-inkscape-font-specification:Handlee;stroke-width:0.23412"
+         x="3.4200537"
+         y="132.24367"
          id="tspan113488">green) to its target (colored dull green). It</tspan><tspan
          sodipodi:role="line"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Princess Sofia';-inkscape-font-specification:'Princess Sofia';stroke-width:0.26458"
-         x="3.4358931"
-         y="150.5654"
-         id="tspan3675">will obviously have to avoid the obstacles.</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Handlee;-inkscape-font-specification:Handlee;stroke-width:0.23412"
+         x="3.4200537"
+         y="143.94966"
+         id="tspan3675">will have to navigate around any obstacles.</tspan></text>
   </g>
 </svg>

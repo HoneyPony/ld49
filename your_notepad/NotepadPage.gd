@@ -38,6 +38,9 @@ func build_pages():
 	if GS.has_SR:
 		pages.append($Page6)
 		last_page += 1
+		
+	pages.append($PageEnd)
+	last_page += 1
 
 func turn(dir):
 	var pnew = page + dir
@@ -48,9 +51,18 @@ func turn(dir):
 
 	page = pnew
 	
+func color_button(button, val):
+	var c = Color.black
+	if val:
+		c = Color(0.4, 0.4, 0.4)
+	button.modulate = c
+	
 func setup_pages():
 	$Prev.visible = page > 1
 	$Next.visible = page < last_page
+	
+	color_button($Prev, GS.hover_prev_button)
+	color_button($Next, GS.hover_next_button)
 	
 	build_pages()
 	

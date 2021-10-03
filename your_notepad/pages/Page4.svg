@@ -10,8 +10,8 @@
    inkscape:version="1.1 (c68e22c387, 2021-05-23)"
    sodipodi:docname="Page4.svg"
    inkscape:export-filename="C:\Users\Bens\Documents\Godot\LD49\your_notepad\pages\Page4.png"
-   inkscape:export-xdpi="96"
-   inkscape:export-ydpi="96"
+   inkscape:export-xdpi="192"
+   inkscape:export-ydpi="192"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -28,9 +28,9 @@
      showgrid="false"
      units="px"
      width="64px"
-     inkscape:zoom="3.25"
-     inkscape:cx="123.53846"
-     inkscape:cy="585.38462"
+     inkscape:zoom="0.8125"
+     inkscape:cx="224.61538"
+     inkscape:cy="435.07692"
      inkscape:window-width="1920"
      inkscape:window-height="1017"
      inkscape:window-x="-8"
@@ -46,84 +46,84 @@
      id="layer1">
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.5832px;line-height:1.25;font-family:'Princess Sofia';-inkscape-font-specification:'Princess Sofia';fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458"
-       x="93.106621"
-       y="87.22599"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.4961px;line-height:1.25;font-family:Handlee;-inkscape-font-specification:Handlee;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.237402"
+       x="29.393757"
+       y="91.295212"
        id="text51255"><tspan
          sodipodi:role="line"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Princess Sofia';-inkscape-font-specification:'Princess Sofia';stroke-width:0.26458"
-         x="93.106621"
-         y="87.22599"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Handlee;-inkscape-font-specification:Handlee;stroke-width:0.237402"
+         x="29.393757"
+         y="91.295212"
          id="tspan2597">- Enable turbo</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.5832px;line-height:1.25;font-family:'Princess Sofia';-inkscape-font-specification:'Princess Sofia';fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458"
-       x="8.3989067"
-       y="31.323713"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.12386px;line-height:1.25;font-family:Handlee;-inkscape-font-specification:Handlee;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.228097"
+       x="6.1004767"
+       y="28.190746"
        id="text51255-9"><tspan
          sodipodi:role="line"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Princess Sofia';-inkscape-font-specification:'Princess Sofia';stroke-width:0.26458"
-         x="8.3989067"
-         y="31.323713"
-         id="tspan2597-04">The ship's &quot;turbo mode&quot; may be enabled</tspan><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Handlee;-inkscape-font-specification:Handlee;stroke-width:0.228097"
+         x="6.1004767"
+         y="28.190746"
+         id="tspan2597-04">The ship's &quot;turbo mode&quot; may be</tspan><tspan
          sodipodi:role="line"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Princess Sofia';-inkscape-font-specification:'Princess Sofia';stroke-width:0.26458"
-         x="8.3989067"
-         y="44.552715"
-         id="tspan44526">or disabled by command.</tspan><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Handlee;-inkscape-font-specification:Handlee;stroke-width:0.228097"
+         x="6.1004767"
+         y="39.595573"
+         id="tspan44526">enabled or disabled by command.</tspan><tspan
          sodipodi:role="line"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Princess Sofia';-inkscape-font-specification:'Princess Sofia';stroke-width:0.26458"
-         x="8.3989067"
-         y="57.781715"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Handlee;-inkscape-font-specification:Handlee;stroke-width:0.228097"
+         x="6.1004767"
+         y="51.000397"
          id="tspan56752" /><tspan
          sodipodi:role="line"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Princess Sofia';-inkscape-font-specification:'Princess Sofia';stroke-width:0.26458"
-         x="8.3989067"
-         y="71.010712"
-         id="tspan44528">While in turbo, the ship moves forward</tspan><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Handlee;-inkscape-font-specification:Handlee;stroke-width:0.228097"
+         x="6.1004767"
+         y="62.405224"
+         id="tspan44528">While in turbo, the ship moves</tspan><tspan
          sodipodi:role="line"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Princess Sofia';-inkscape-font-specification:'Princess Sofia';stroke-width:0.26458"
-         x="8.3989067"
-         y="84.239716"
-         id="tspan44530">twice as fast.</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Handlee;-inkscape-font-specification:Handlee;stroke-width:0.228097"
+         x="6.1004767"
+         y="73.810051"
+         id="tspan44530">forward twice as fast.</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.5832px;line-height:1.25;font-family:'Princess Sofia';-inkscape-font-specification:'Princess Sofia';fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458"
-       x="32.887447"
-       y="133.53027"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.0616px;line-height:1.25;font-family:Handlee;-inkscape-font-specification:Handlee;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.251541"
+       x="6.6705446"
+       y="134.91792"
        id="text51255-7"><tspan
          sodipodi:role="line"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Princess Sofia';-inkscape-font-specification:'Princess Sofia';stroke-width:0.26458"
-         x="32.887447"
-         y="133.53027"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Handlee;-inkscape-font-specification:Handlee;stroke-width:0.251541"
+         x="6.6705446"
+         y="134.91792"
          id="tspan26324">Move the ship forward five spaces.</tspan><tspan
          sodipodi:role="line"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Princess Sofia';-inkscape-font-specification:'Princess Sofia';stroke-width:0.26458"
-         x="32.887447"
-         y="146.75928"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Handlee;-inkscape-font-specification:Handlee;stroke-width:0.251541"
+         x="6.6705446"
+         y="147.49492"
          id="tspan63592" /></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.5832px;line-height:1.25;font-family:'Princess Sofia';-inkscape-font-specification:'Princess Sofia';fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458"
-       x="4.8451509"
-       y="118.50471"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.0616px;line-height:1.25;font-family:Handlee;-inkscape-font-specification:Handlee;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.251541"
+       x="6.9602599"
+       y="120.99798"
        id="text51255-8"><tspan
          sodipodi:role="line"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Princess Sofia';-inkscape-font-specification:'Princess Sofia';stroke-width:0.26458"
-         x="4.8451509"
-         y="118.50471"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Handlee;-inkscape-font-specification:Handlee;stroke-width:0.251541"
+         x="6.9602599"
+         y="120.99798"
          id="tspan2597-0">Example: </tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:10.5832px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458"
-       x="77.557457"
-       y="88.935593"
+       style="font-style:normal;font-weight:normal;font-size:9.4961px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.237402"
+       x="14.751027"
+       y="92.138428"
        id="text5719"><tspan
          sodipodi:role="line"
          id="tspan5717"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:LCD;-inkscape-font-specification:LCD;stroke-width:0.26458"
-         x="77.557457"
-         y="88.935593">53</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:LCD;-inkscape-font-specification:LCD;stroke-width:0.237402"
+         x="14.751027"
+         y="92.138428">53</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:10.5832px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458"
@@ -137,29 +137,29 @@
          y="32.238056" /></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:10.5832px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458"
-       x="43.286564"
-       y="120.07342"
+       style="font-style:normal;font-weight:normal;font-size:10.0616px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.251541"
+       x="43.507179"
+       y="122.48936"
        id="text9254"><tspan
          sodipodi:role="line"
          id="tspan9252"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:LCD;-inkscape-font-specification:LCD;stroke-width:0.26458"
-         x="43.286564"
-         y="120.07342">53 0A 0A E9 0A</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:LCD;-inkscape-font-specification:LCD;stroke-width:0.251541"
+         x="43.507179"
+         y="122.48936">53 0A 0A E9 0A</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.5832px;line-height:1.25;font-family:'Princess Sofia';-inkscape-font-specification:'Princess Sofia';fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458"
-       x="58.858875"
-       y="15.22353"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.5832px;line-height:1.25;font-family:Handlee;-inkscape-font-specification:Handlee;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458"
+       x="57.881966"
+       y="14.897893"
        id="text39920"><tspan
          sodipodi:role="line"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Princess Sofia';-inkscape-font-specification:'Princess Sofia';stroke-width:0.26458"
-         x="58.858875"
-         y="15.22353"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Handlee;-inkscape-font-specification:Handlee;stroke-width:0.26458"
+         x="57.881966"
+         y="14.897893"
          id="tspan39918">Turbo Mode</tspan></text>
     <path
        style="fill:none;stroke:#012b00;stroke-width:0.52916"
-       d="m 54.055729,18.235668 53.404461,0.976911"
+       d="m 58.289009,16.607483 53.404461,0.976911"
        id="path41685" />
     <text
        xml:space="preserve"
@@ -171,7 +171,7 @@
          id="tspan47822"
          style="stroke-width:0.26458"
          x="112.99602"
-         y="44.286621"></tspan><tspan
+         y="44.286621" /><tspan
          sodipodi:role="line"
          style="stroke-width:0.26458"
          id="tspan47826"
@@ -179,81 +179,81 @@
          y="57.515621" /></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.5832px;line-height:1.25;font-family:'Princess Sofia';-inkscape-font-specification:'Princess Sofia';fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458"
-       x="93.106621"
-       y="100.90275"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.4961px;line-height:1.25;font-family:Handlee;-inkscape-font-specification:Handlee;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.237402"
+       x="29.425068"
+       y="103.43005"
        id="text51216"><tspan
          sodipodi:role="line"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Princess Sofia';-inkscape-font-specification:'Princess Sofia';stroke-width:0.26458"
-         x="93.106621"
-         y="100.90275"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Handlee;-inkscape-font-specification:Handlee;stroke-width:0.237402"
+         x="29.425068"
+         y="103.43005"
          id="tspan51214">- Disable turbo</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:10.5832px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458"
-       x="77.557457"
-       y="102.61234"
+       style="font-style:normal;font-weight:normal;font-size:9.4961px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.237402"
+       x="14.552079"
+       y="104.73377"
        id="text51220"><tspan
          sodipodi:role="line"
          id="tspan51218"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:LCD;-inkscape-font-specification:LCD;stroke-width:0.26458"
-         x="77.557457"
-         y="102.61234">E9</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:LCD;-inkscape-font-specification:LCD;stroke-width:0.237402"
+         x="14.552079"
+         y="104.73377">E9</tspan></text>
     <path
        style="fill:none;stroke:#012b00;stroke-width:0.410414"
-       d="m 16.726019,147.45416 c 2.778188,0 111.885191,0.50512 111.885191,0.50512 l 0.25257,21.46781 -112.642886,-3.28331 z"
+       d="m 14.249029,141.98379 c 2.778188,0 111.885191,0.50512 111.885191,0.50512 l 0.25257,21.46781 -112.642886,-3.28331 z"
        id="path64007" />
     <path
        style="fill:none;stroke:#012b00;stroke-width:0.410414"
-       d="m 35.415646,147.70672 -0.252563,19.19475"
+       d="M 32.938656,142.23635 32.686093,161.4311"
        id="path64009" />
     <path
        style="fill:none;stroke:#012b00;stroke-width:0.410414"
-       d="M 55.115523,166.90147 54.610397,147.70672"
+       d="M 52.638533,161.4311 52.133407,142.23635"
        id="path64011" />
     <path
        style="fill:none;stroke:#012b00;stroke-width:0.410414"
-       d="m 77.341025,147.70672 -0.505123,19.95243"
+       d="m 74.864035,142.23635 -0.505123,19.95243"
        id="path64013" />
     <path
        style="fill:none;stroke:#012b00;stroke-width:0.410414"
-       d="m 102.59728,168.41684 -0.75769,-20.71012"
+       d="M 100.12029,162.94647 99.3626,142.23635"
        id="path64015" />
     <path
        style="fill:none;stroke:#012b00;stroke-width:0.410414"
-       d="m 19.314785,164.3127 14.269784,-8.01886 -14.774909,-6.88233 4.293563,8.01887 z"
+       d="m 16.837795,158.84233 14.269784,-8.01886 -14.774909,-6.88233 4.293563,8.01887 z"
        id="path64017" />
     <path
        style="fill:none;stroke:#012b00;stroke-width:0.410414"
-       d="m 34.143818,156.58294 33.094708,0.46859 -3.030753,-2.14678"
+       d="m 31.666828,151.11257 33.094708,0.46859 -3.030753,-2.14678"
        id="path64019"
        sodipodi:nodetypes="ccc" />
     <path
        style="fill:none;stroke:#012b00;stroke-width:0.410414"
-       d="m 67.364806,157.43038 -3.03075,2.39934"
+       d="m 64.887816,151.96001 -3.03075,2.39934"
        id="path64021" />
     <path
        style="fill:none;stroke:#012b00;stroke-width:0.410414"
-       d="m 69.76415,157.43038 c 1.641657,-0.12629 42.93562,1.01025 42.93562,1.01025 l -2.52562,-2.39934"
+       d="m 67.28716,151.96001 c 1.641657,-0.12629 42.93562,1.01025 42.93562,1.01025 l -2.52562,-2.39934"
        id="path64023"
        sodipodi:nodetypes="ccc" />
     <path
        style="fill:none;stroke:#012b00;stroke-width:0.410414"
-       d="m 113.07863,158.69319 -2.65192,2.39934"
+       d="m 110.60164,153.22282 -2.65192,2.39934"
        id="path64025"
        sodipodi:nodetypes="cc" />
     <path
        style="fill:none;stroke:#012b00;stroke-width:0.410414"
-       d="m 128.86378,148.21184 21.84666,0.12628 -0.63141,20.71013 -21.21525,0.50513"
+       d="m 126.38679,142.74147 21.84666,0.12628 -0.63141,20.71013 -21.21525,0.50513"
        id="path64027" />
     <path
        style="fill:none;stroke:#012b00;stroke-width:0.410414"
-       d="m 118.635,158.44063 19.95243,-1e-5 -2.52562,-2.77818"
+       d="m 116.15801,152.97026 19.95243,-1e-5 -2.52562,-2.77818"
        id="path64029"
        sodipodi:nodetypes="ccc" />
     <path
        style="fill:none;stroke:#012b00;stroke-width:0.410414"
-       d="m 138.58743,158.5669 -2.39934,2.02051"
+       d="m 136.11044,153.09653 -2.39934,2.02051"
        id="path64031" />
   </g>
 </svg>

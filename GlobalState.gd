@@ -11,6 +11,9 @@ var LevelSelect = preload("res://LevelSelect.tscn")
 var Main3D = preload("res://Main3D.tscn")
 var MainMenu = preload("res://MainMenu.tscn")
 
+var hover_prev_button = false
+var hover_next_button = false
+
 var current_puzzle_level = null
 var current_level_info = null
 
@@ -25,6 +28,9 @@ var has_SR = false
 var second_ls_load = false
 
 func reset_GS():
+	hover_prev_button = false
+	hover_next_button = false
+	
 	current_puzzle_level = null
 	current_level_info = null
 

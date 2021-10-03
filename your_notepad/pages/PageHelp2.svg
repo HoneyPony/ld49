@@ -10,8 +10,8 @@
    inkscape:version="1.1 (c68e22c387, 2021-05-23)"
    sodipodi:docname="PageHelp2.svg"
    inkscape:export-filename="C:\Users\Bens\Documents\Godot\LD49\your_notepad\pages\PageHelp2.png"
-   inkscape:export-xdpi="96"
-   inkscape:export-ydpi="96"
+   inkscape:export-xdpi="192"
+   inkscape:export-ydpi="192"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -28,9 +28,9 @@
      showgrid="false"
      units="px"
      width="64px"
-     inkscape:zoom="0.57452426"
-     inkscape:cx="460.38091"
-     inkscape:cy="326.35698"
+     inkscape:zoom="0.40625"
+     inkscape:cx="774.15385"
+     inkscape:cy="530.46154"
      inkscape:window-width="1920"
      inkscape:window-height="1017"
      inkscape:window-x="-8"
@@ -40,6 +40,12 @@
      inkscape:snap-global="false" />
   <defs
      id="defs4581">
+    <rect
+       x="237.53846"
+       y="96"
+       width="264.61538"
+       height="83.692308"
+       id="rect79596" />
     <rect
        x="285.53846"
        y="313.84615"
@@ -81,35 +87,50 @@
        y="12.267114"
        id="text82542"><tspan
          sodipodi:role="line"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Princess Sofia';-inkscape-font-specification:'Princess Sofia';stroke-width:0.26458"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Handlee;-inkscape-font-specification:Handlee;stroke-width:0.26458"
          x="3.4917631"
          y="12.267114"
-         id="tspan93650">Unfortunately, the codes are not as simple</tspan><tspan
+         id="tspan88722">Unfortunately, the codes A1, B2, and</tspan><tspan
          sodipodi:role="line"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Princess Sofia';-inkscape-font-specification:'Princess Sofia';stroke-width:0.26458"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Handlee;-inkscape-font-specification:Handlee;stroke-width:0.26458"
          x="3.4917631"
-         y="26.78874"
-         id="tspan105069">as 01 or 02.</tspan><tspan
+         y="26.134974"
+         id="tspan89558">3C do not do anything.</tspan><tspan
          sodipodi:role="line"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Princess Sofia';-inkscape-font-specification:'Princess Sofia';stroke-width:0.26458"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Handlee;-inkscape-font-specification:Handlee;stroke-width:0.26458"
          x="3.4917631"
-         y="41.310364"
-         id="tspan105075" /><tspan
+         y="40.002831"
+         id="tspan89562" /><tspan
          sodipodi:role="line"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Princess Sofia';-inkscape-font-specification:'Princess Sofia';stroke-width:0.26458"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Handlee;-inkscape-font-specification:Handlee;stroke-width:0.26458"
          x="3.4917631"
-         y="55.831993"
-         id="tspan107655">I've written down a list of all the codes the</tspan><tspan
+         y="53.870689"
+         id="tspan80526">The specific codes that the ship uses</tspan><tspan
          sodipodi:role="line"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Princess Sofia';-inkscape-font-specification:'Princess Sofia';stroke-width:0.26458"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Handlee;-inkscape-font-specification:Handlee;stroke-width:0.26458"
          x="3.4917631"
-         y="70.353615"
-         id="tspan108145">ship uses in this book. It would be a shame</tspan><tspan
+         y="67.738548"
+         id="tspan89566">are documented in the rest of these</tspan><tspan
          sodipodi:role="line"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Princess Sofia';-inkscape-font-specification:'Princess Sofia';stroke-width:0.26458"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Handlee;-inkscape-font-specification:Handlee;stroke-width:0.26458"
          x="3.4917631"
-         y="84.875244"
-         id="tspan110007">if I were to lose any of the pages!</tspan></text>
+         y="81.606407"
+         id="tspan108145">notes.</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Handlee;-inkscape-font-specification:Handlee;stroke-width:0.26458"
+         x="3.4917631"
+         y="95.474266"
+         id="tspan91439" /><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Handlee;-inkscape-font-specification:Handlee;stroke-width:0.26458"
+         x="3.4917631"
+         y="109.34212"
+         id="tspan110007">It would be a shame if I were to lose</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Handlee;-inkscape-font-specification:Handlee;stroke-width:0.26458"
+         x="3.4917631"
+         y="123.20998"
+         id="tspan93001">any of the pages!</tspan></text>
     <text
        xml:space="preserve"
        transform="scale(0.26458)"
@@ -125,5 +146,10 @@
        transform="scale(0.26458)"
        id="text109063"
        style="fill:black;fill-opacity:1;line-height:1.25;stroke:none;font-family:sans-serif;font-style:normal;font-weight:normal;font-size:40px;white-space:pre;shape-inside:url(#rect109065)" />
+    <text
+       xml:space="preserve"
+       transform="scale(0.26458)"
+       id="text79594"
+       style="fill:black;fill-opacity:1;line-height:1.25;stroke:none;font-family:sans-serif;font-style:normal;font-weight:normal;font-size:40px;white-space:pre;shape-inside:url(#rect79596)" />
   </g>
 </svg>
