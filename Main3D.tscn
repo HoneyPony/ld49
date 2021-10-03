@@ -1,4 +1,4 @@
-[gd_scene load_steps=118 format=2]
+[gd_scene load_steps=120 format=2]
 
 [ext_resource path="res://LevelSelect.tscn" type="PackedScene" id=1]
 [ext_resource path="res://gui_3d.gd" type="Script" id=2]
@@ -28,6 +28,7 @@
 [ext_resource path="res://PauseMenu.gd" type="Script" id=26]
 [ext_resource path="res://world/TheEnd.gd" type="Script" id=27]
 [ext_resource path="res://music/game_music_again.ogg" type="AudioStream" id=28]
+[ext_resource path="res://misc/SoundCTRL.tscn" type="PackedScene" id=29]
 
 [sub_resource type="PlaneMesh" id=1]
 size = Vector2( 2, 1.2 )
@@ -777,6 +778,22 @@ bg_color = Color( 0.768627, 0.768627, 0.768627, 1 )
 [sub_resource type="StyleBoxFlat" id=88]
 bg_color = Color( 0.819608, 0.819608, 0.819608, 1 )
 
+[sub_resource type="Animation" id=90]
+resource_name = "Init"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Music:volume_db")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 4.4 ]
+}
+
 [sub_resource type="Animation" id=89]
 resource_name = "OnEnd"
 length = 8.0
@@ -841,6 +858,18 @@ tracks/4/keys = {
 "args": [  ],
 "method": "pause"
 } ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Music:volume_db")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 4.4, -80.0 ]
 }
 
 [node name="Spatial" type="Spatial"]
@@ -1458,6 +1487,37 @@ custom_styles/normal = SubResource( 84 )
 custom_fonts/font = SubResource( 85 )
 enabled_focus_mode = 0
 text = "resume"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Quit" type="Button" parent="Pause/ColorRect"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -147.5
+margin_top = -102.045
+margin_right = 147.5
+margin_bottom = -40.0452
+focus_mode = 0
+custom_styles/hover = SubResource( 82 )
+custom_styles/pressed = SubResource( 83 )
+custom_styles/normal = SubResource( 84 )
+custom_fonts/font = SubResource( 85 )
+enabled_focus_mode = 0
+text = "quit to menu"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SoundCTRL" parent="Pause/ColorRect" instance=ExtResource( 29 )]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -144.5
+margin_top = 230.927
+margin_right = 144.5
+margin_bottom = 332.927
 
 [node name="End" type="CanvasLayer" parent="."]
 layer = 3
@@ -1466,9 +1526,10 @@ layer = 3
 "EndScript",
 ]]
 pause_mode = 2
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
-color = Color( 1, 1, 1, 0.6 )
+color = Color( 1, 1, 1, 0 )
 script = ExtResource( 27 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -1514,14 +1575,19 @@ enabled_focus_mode = 0
 text = "quit"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="End/ColorRect"]
+autoplay = "Init"
+anims/Init = SubResource( 90 )
 anims/OnEnd = SubResource( 89 )
 
-[node name="Music" type="AudioStreamPlayer" parent="."]
+[node name="Music" type="AudioStreamPlayer" parent="End/ColorRect"]
+pause_mode = 2
 stream = ExtResource( 28 )
 volume_db = 4.4
 autoplay = true
+bus = "Music"
 
 [connection signal="mouse_entered" from="Player/Camera/YourStuff/Slider/GUIPanel3D/SlideToTabletThing" to="Player/Camera/YourStuff" method="_on_SlideToTabletThing_mouse_entered"]
 [connection signal="mouse_entered" from="Player/Camera/YourStuff/Slider/notepad/SlideToNotepadThing" to="Player/Camera/YourStuff" method="_on_SlideToNotepadThing_mouse_entered"]
 [connection signal="pressed" from="Pause/ColorRect/Button" to="Pause/ColorRect" method="_on_Button_pressed"]
+[connection signal="pressed" from="Pause/ColorRect/Quit" to="Pause/ColorRect" method="_on_Quit_pressed"]
 [connection signal="pressed" from="End/ColorRect/Button" to="End/ColorRect" method="_on_Button_pressed"]

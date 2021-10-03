@@ -11,23 +11,23 @@
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0, 1, 0, 1 )
 
-[sub_resource type="StyleBoxFlat" id=4]
+[sub_resource type="StyleBoxFlat" id=2]
 bg_color = Color( 1, 1, 1, 1 )
 
-[sub_resource type="StyleBoxFlat" id=5]
+[sub_resource type="StyleBoxFlat" id=3]
 bg_color = Color( 0, 0.211765, 0, 1 )
 
-[sub_resource type="StyleBoxFlat" id=6]
+[sub_resource type="StyleBoxFlat" id=4]
 content_margin_left = 40.0
 bg_color = Color( 0.0392157, 0.0392157, 0.0392157, 1 )
 
-[sub_resource type="Theme" id=3]
+[sub_resource type="Theme" id=5]
 VScrollBar/styles/grabber = SubResource( 1 )
-VScrollBar/styles/grabber_highlight = SubResource( 4 )
-VScrollBar/styles/grabber_pressed = SubResource( 5 )
-VScrollBar/styles/scroll = SubResource( 6 )
+VScrollBar/styles/grabber_highlight = SubResource( 2 )
+VScrollBar/styles/grabber_pressed = SubResource( 3 )
+VScrollBar/styles/scroll = SubResource( 4 )
 
-[sub_resource type="StyleBoxFlat" id=7]
+[sub_resource type="StyleBoxFlat" id=6]
 bg_color = Color( 0.0666667, 0.0666667, 0.0666667, 1 )
 border_width_left = 6
 border_width_top = 6
@@ -42,7 +42,7 @@ expand_margin_left = 4.0
 expand_margin_right = 4.0
 expand_margin_top = 8.0
 
-[sub_resource type="StyleBoxFlat" id=8]
+[sub_resource type="StyleBoxFlat" id=7]
 bg_color = Color( 0.454902, 0.454902, 0.454902, 1 )
 border_width_left = 6
 border_width_top = 6
@@ -68,7 +68,7 @@ __meta__ = {
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 1
-theme = SubResource( 3 )
+theme = SubResource( 5 )
 scroll_horizontal_enabled = false
 __meta__ = {
 "_edit_use_anchors_": false
@@ -217,6 +217,7 @@ __meta__ = {
 stream = ExtResource( 3 )
 
 [node name="End" type="ColorRect" parent="."]
+visible = false
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -252,8 +253,8 @@ margin_top = -65.8995
 margin_right = -17.7816
 margin_bottom = -13.8995
 focus_mode = 0
-custom_styles/hover = SubResource( 7 )
-custom_styles/pressed = SubResource( 8 )
+custom_styles/hover = SubResource( 6 )
+custom_styles/pressed = SubResource( 7 )
 custom_styles/normal = ExtResource( 7 )
 custom_fonts/font = ExtResource( 5 )
 custom_colors/font_color = Color( 0, 1, 0, 1 )
@@ -275,8 +276,8 @@ margin_top = -65.7279
 margin_right = 145.368
 margin_bottom = -13.7279
 focus_mode = 0
-custom_styles/hover = SubResource( 7 )
-custom_styles/pressed = SubResource( 8 )
+custom_styles/hover = SubResource( 6 )
+custom_styles/pressed = SubResource( 7 )
 custom_styles/normal = ExtResource( 7 )
 custom_fonts/font = ExtResource( 5 )
 custom_colors/font_color = Color( 0, 1, 0, 1 )

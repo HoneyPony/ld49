@@ -8,6 +8,8 @@ extends Node
 
 var Game = preload("res://Game.tscn")
 var LevelSelect = preload("res://LevelSelect.tscn")
+var Main3D = preload("res://Main3D.tscn")
+var MainMenu = preload("res://MainMenu.tscn")
 
 var current_puzzle_level = null
 var current_level_info = null
@@ -21,6 +23,41 @@ var has_SL = false
 var has_SR = false
 
 var second_ls_load = false
+
+func reset_GS():
+	current_puzzle_level = null
+	current_level_info = null
+
+	ship = null
+
+	has_L = false
+	has_R = false
+	has_Turb = false
+	has_SL = false
+	has_SR = false
+
+	second_ls_load = false
+	
+	current_level_id = -1
+	
+	levels = [
+		augment_level(LevelInfo.new(1), ""),
+		LevelInfo.new(2),
+		LevelInfo.new(3, true),
+		LevelInfo.new(4, true),
+		LevelInfo.new(5, false, true),
+		LevelInfo.new(6, true, true),
+		LevelInfo.new(7, true, true),
+		LevelInfo.new(8, true, false, true),
+		LevelInfo.new(9, false, true, true),
+		LevelInfo.new(10, false, false, false, true),
+		LevelInfo.new(11, true, false, false, true, true),
+		LevelInfo.new(12, true, false, false, false, true),
+		
+		LevelInfo.new(13, true, true, true),
+		LevelInfo.new(14, true, false, true),
+		LevelInfo.new(15, true, true, true, true, true),
+	]
 
 func activate_ability(which):
 	if which == 0:
