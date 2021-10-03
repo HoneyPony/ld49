@@ -1,9 +1,10 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://fonts/joesfin/JosefinSans-SemiBold.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://world/sun_model/SunModel.tscn" type="PackedScene" id=2]
 [ext_resource path="res://MainMenu.gd" type="Script" id=3]
 [ext_resource path="res://misc/SoundCTRL.tscn" type="PackedScene" id=4]
+[ext_resource path="res://music/menu_music.ogg" type="AudioStream" id=5]
 
 [sub_resource type="DynamicFont" id=1]
 size = 64
@@ -94,6 +95,12 @@ margin_left = -309.941
 margin_top = 120.952
 margin_right = -309.941
 margin_bottom = 120.952
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+volume_db = 4.4
+autoplay = true
+bus = "Music"
 
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="Quit" to="." method="_on_Quit_pressed"]
