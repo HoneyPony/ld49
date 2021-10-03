@@ -41,6 +41,8 @@ func slide_tablet():
 		the_input_handler_col.disabled = false
 		the_shower_col.disabled = true
 		the_notepad_col.disabled = false
+		
+		$SlideLeft.play_sfx()
 
 func _on_SlideToNotepadThing_mouse_entered():
 	pass
@@ -55,6 +57,8 @@ func slide_notepad():
 		the_input_handler_col.disabled = true
 		the_shower_col.disabled = false
 		the_notepad_col.disabled = true
+		
+		$SlideRight.play_sfx()
 
 func check_rays():
 	var mouse = get_viewport().get_mouse_position()

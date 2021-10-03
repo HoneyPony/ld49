@@ -1,6 +1,6 @@
 extends KinematicBody
 
-var is_paused = false
+#var is_paused = false
 
 onready var YourStuff = get_node("Camera/YourStuff")
 
@@ -59,7 +59,7 @@ func rotate_on_mouse(mouse_motion):
 var last_mouse_place = Vector2.ZERO
 
 func handle_mouse_things(mouse_motion):
-	if is_paused or YourStuff.showing_stuff or $Camera.is_diary_mode:
+	if get_tree().paused or YourStuff.showing_stuff or $Camera.is_diary_mode:
 		ignore_next_mouse_frame = true
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 		return
@@ -107,6 +107,11 @@ func handle_oob():
 		translation = Vector3(5.5, 1.15, -0.5)
 
 func _physics_process(delta):
+	if Input.is_action_just_pressed("pause"):
+		get_tree().paused = not get_tree().paused 
+		
+	if get_tree().paused :
+		return
 	#handle_mouse_things(delta)
 	
 	if not YourStuff.showing_stuff:
@@ -145,5 +150,4 @@ func _physics_process(delta):
 				time_till_foot = 0.2
 	handle_oob()
 		
-	if Input.is_action_just_pressed("pause"):
-		is_paused = not is_paused
+	

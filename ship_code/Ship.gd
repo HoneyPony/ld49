@@ -170,6 +170,8 @@ func init_code_state():
 			$AnimationPlayer.stop()
 			$AnimationPlayer.play("TurnOnTurbo")
 			
+			$TurboOn.play_usual()
+			
 	if current_code == CodeInternal.DisableTurbo:
 		if turbo_multiplier_state <= 1.0:
 			cs_root_pos = position
@@ -181,6 +183,8 @@ func init_code_state():
 			cs_root_pos = position
 			$AnimationPlayer.stop()
 			$AnimationPlayer.play("TurnOffTurbo")
+			
+			$TurboOff.play_usual()
 		
 func is_motion_code(c):
 	return c == CodeInternal.MoveForward or c == CodeInternal.StrafeLeft or c == CodeInternal.StrafeRight
