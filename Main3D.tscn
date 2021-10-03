@@ -1,4 +1,4 @@
-[gd_scene load_steps=117 format=2]
+[gd_scene load_steps=118 format=2]
 
 [ext_resource path="res://LevelSelect.tscn" type="PackedScene" id=1]
 [ext_resource path="res://gui_3d.gd" type="Script" id=2]
@@ -27,6 +27,7 @@
 [ext_resource path="res://fonts/joesfin/JosefinSans-SemiBold.ttf" type="DynamicFontData" id=25]
 [ext_resource path="res://PauseMenu.gd" type="Script" id=26]
 [ext_resource path="res://world/TheEnd.gd" type="Script" id=27]
+[ext_resource path="res://music/game_music_again.ogg" type="AudioStream" id=28]
 
 [sub_resource type="PlaneMesh" id=1]
 size = Vector2( 2, 1.2 )
@@ -462,7 +463,7 @@ data = PoolVector3Array( 132.532, -148.476, -114.198, 131.852, -90.4382, -118.85
 [sub_resource type="ConcavePolygonShape" id=67]
 data = PoolVector3Array( 86.9134, -39.6631, -34.5706, 86.5013, -36.9254, -34.5706, 86.5013, -39.6631, -34.5706, 86.9134, -39.6631, -34.5706, 86.9134, -36.9254, -34.5706, 86.5013, -36.9254, -34.5706, 86.9134, -39.6631, -23.5823, 86.9134, -36.9254, -34.1467, 86.9134, -39.6631, -34.1467, 86.9134, -39.6631, -23.5823, 86.9134, -36.9254, -23.5823, 86.9134, -36.9254, -34.1467, 74.3394, -39.6631, -16.8779, 86.5013, -36.9254, -16.8779, 86.5013, -39.6631, -16.8779, 74.3394, -39.6631, -16.8779, 74.3394, -36.9254, -16.8779, 86.5013, -36.9254, -16.8779, 86.5013, -39.6849, -23.5823, 86.5013, -36.9254, -20.097, 86.5013, -39.6849, -20.097, 86.5013, -39.6849, -23.5823, 86.5013, -36.9254, -23.5823, 86.5013, -36.9254, -20.097, 74.3394, -45.3273, -23.5823, 86.5013, -45.3273, -34.1467, 86.5013, -45.3273, -23.5823, 74.3394, -45.3273, -23.5823, 74.3394, -45.3273, -34.1467, 86.5013, -45.3273, -34.1467, 86.9134, -39.6631, -16.8779, 86.9134, -36.9254, -17.3019, 86.9134, -39.6631, -17.3019, 86.9134, -39.6631, -16.8779, 86.9134, -36.9254, -16.8779, 86.9134, -36.9254, -17.3019, 86.5013, -39.6849, -20.097, 86.5013, -36.9254, -17.3019, 86.5013, -39.6849, -17.3019, 86.5013, -39.6849, -20.097, 86.5013, -36.9254, -20.097, 86.5013, -36.9254, -17.3019, 74.3394, -39.6849, -34.1467, 86.5013, -36.9254, -34.1467, 86.5013, -39.6849, -34.1467, 74.3394, -39.6849, -34.1467, 74.3394, -36.9254, -34.1467, 86.5013, -36.9254, -34.1467, 73.9272, -39.6631, -16.8779, 74.3394, -36.9254, -16.8779, 74.3394, -39.6631, -16.8779, 73.9272, -39.6631, -16.8779, 73.9272, -36.9254, -16.8779, 74.3394, -36.9254, -16.8779, 74.3394, -39.6849, -20.097, 74.3394, -36.9254, -23.5823, 74.3394, -39.6849, -23.5823, 74.3394, -39.6849, -20.097, 74.3394, -36.9254, -20.097, 74.3394, -36.9254, -23.5823, 73.9272, -39.6631, -20.097, 73.9272, -36.9254, -17.3019, 73.9272, -39.6631, -17.3019, 73.9272, -39.6631, -20.097, 73.9272, -36.9254, -20.097, 73.9272, -36.9254, -17.3019, 74.3394, -45.3273, -20.097, 86.5013, -45.3273, -23.5823, 86.5013, -45.3273, -20.097, 74.3394, -45.3273, -20.097, 74.3394, -45.3273, -23.5823, 86.5013, -45.3273, -23.5823, 74.3394, -45.3273, -17.3019, 86.5013, -45.3273, -20.097, 86.5013, -45.3273, -17.3019, 74.3394, -45.3273, -17.3019, 74.3394, -45.3273, -20.097, 86.5013, -45.3273, -20.097, 74.3394, -39.6849, -17.3019, 74.3394, -36.9254, -20.097, 74.3394, -39.6849, -20.097, 74.3394, -39.6849, -17.3019, 74.3394, -36.9254, -17.3019, 74.3394, -36.9254, -20.097, 86.5013, -39.6849, -17.3019, 74.3394, -36.9254, -17.3019, 74.3394, -39.6849, -17.3019, 86.5013, -39.6849, -17.3019, 86.5013, -36.9254, -17.3019, 74.3394, -36.9254, -17.3019, 86.5013, -36.9254, -34.1467, 86.9134, -36.9254, -34.5706, 86.9134, -36.9254, -34.1467, 86.5013, -36.9254, -34.1467, 86.5013, -36.9254, -34.5706, 86.9134, -36.9254, -34.5706, 73.9272, -36.9254, -34.1467, 74.3394, -36.9254, -34.5706, 74.3394, -36.9254, -34.1467, 73.9272, -36.9254, -34.1467, 73.9272, -36.9254, -34.5706, 74.3394, -36.9254, -34.5706, 74.3394, -36.9254, -34.1467, 86.5013, -36.9254, -34.5706, 86.5013, -36.9254, -34.1467, 74.3394, -36.9254, -34.1467, 74.3394, -36.9254, -34.5706, 86.5013, -36.9254, -34.5706, 74.3394, -36.9254, -16.8779, 86.5013, -36.9254, -17.3019, 86.5013, -36.9254, -16.8779, 74.3394, -36.9254, -16.8779, 74.3394, -36.9254, -17.3019, 86.5013, -36.9254, -17.3019, 73.9272, -36.9254, -16.8779, 74.3394, -36.9254, -17.3019, 74.3394, -36.9254, -16.8779, 73.9272, -36.9254, -16.8779, 73.9272, -36.9254, -17.3019, 74.3394, -36.9254, -17.3019, 73.9272, -36.9254, -23.5823, 74.3394, -36.9254, -34.1467, 74.3394, -36.9254, -23.5823, 73.9272, -36.9254, -23.5823, 73.9272, -36.9254, -34.1467, 74.3394, -36.9254, -34.1467, 86.5013, -36.9254, -16.8779, 86.9134, -36.9254, -17.3019, 86.9134, -36.9254, -16.8779, 86.5013, -36.9254, -16.8779, 86.5013, -36.9254, -17.3019, 86.9134, -36.9254, -17.3019, 86.5013, -36.9254, -23.5823, 86.9134, -36.9254, -34.1467, 86.9134, -36.9254, -23.5823, 86.5013, -36.9254, -23.5823, 86.5013, -36.9254, -34.1467, 86.9134, -36.9254, -34.1467, 86.5013, -36.9254, -20.097, 86.9134, -36.9254, -23.5823, 86.9134, -36.9254, -20.097, 86.5013, -36.9254, -20.097, 86.5013, -36.9254, -23.5823, 86.9134, -36.9254, -23.5823, 73.9272, -36.9254, -20.097, 74.3394, -36.9254, -23.5823, 74.3394, -36.9254, -20.097, 73.9272, -36.9254, -20.097, 73.9272, -36.9254, -23.5823, 74.3394, -36.9254, -23.5823, 73.9272, -36.9254, -17.3019, 74.3394, -36.9254, -20.097, 74.3394, -36.9254, -17.3019, 73.9272, -36.9254, -17.3019, 73.9272, -36.9254, -20.097, 74.3394, -36.9254, -20.097, 86.5013, -36.9254, -17.3019, 86.9134, -36.9254, -20.097, 86.9134, -36.9254, -17.3019, 86.5013, -36.9254, -17.3019, 86.5013, -36.9254, -20.097, 86.9134, -36.9254, -20.097, 86.5013, -39.6631, -34.5706, 74.3394, -36.9254, -34.5706, 74.3394, -39.6631, -34.5706, 86.5013, -39.6631, -34.5706, 86.5013, -36.9254, -34.5706, 74.3394, -36.9254, -34.5706, 73.9272, -39.6631, -17.3019, 73.9272, -36.9254, -16.8779, 73.9272, -39.6631, -16.8779, 73.9272, -39.6631, -17.3019, 73.9272, -36.9254, -17.3019, 73.9272, -36.9254, -16.8779, 74.3394, -39.6849, -23.5823, 74.3394, -36.9254, -34.1467, 74.3394, -39.6849, -34.1467, 74.3394, -39.6849, -23.5823, 74.3394, -36.9254, -23.5823, 74.3394, -36.9254, -34.1467, 86.5013, -39.6631, -16.8779, 86.9134, -36.9254, -16.8779, 86.9134, -39.6631, -16.8779, 86.5013, -39.6631, -16.8779, 86.5013, -36.9254, -16.8779, 86.9134, -36.9254, -16.8779, 73.9272, -39.6631, -23.5823, 73.9272, -36.9254, -20.097, 73.9272, -39.6631, -20.097, 73.9272, -39.6631, -23.5823, 73.9272, -36.9254, -23.5823, 73.9272, -36.9254, -20.097, 73.9272, -39.6631, -34.1467, 73.9272, -36.9254, -23.5823, 73.9272, -39.6631, -23.5823, 73.9272, -39.6631, -34.1467, 73.9272, -36.9254, -34.1467, 73.9272, -36.9254, -23.5823, 86.9134, -39.6631, -34.1467, 86.9134, -36.9254, -34.5706, 86.9134, -39.6631, -34.5706, 86.9134, -39.6631, -34.1467, 86.9134, -36.9254, -34.1467, 86.9134, -36.9254, -34.5706, 86.5013, -39.6849, -34.1467, 86.5013, -36.9254, -23.5823, 86.5013, -39.6849, -23.5823, 86.5013, -39.6849, -34.1467, 86.5013, -36.9254, -34.1467, 86.5013, -36.9254, -23.5823, 86.9134, -39.6631, -17.3019, 86.9134, -36.9254, -20.097, 86.9134, -39.6631, -20.097, 86.9134, -39.6631, -17.3019, 86.9134, -36.9254, -17.3019, 86.9134, -36.9254, -20.097, 73.9272, -39.6631, -34.5706, 73.9272, -36.9254, -34.1467, 73.9272, -39.6631, -34.1467, 73.9272, -39.6631, -34.5706, 73.9272, -36.9254, -34.5706, 73.9272, -36.9254, -34.1467, 86.9134, -39.6631, -20.097, 86.9134, -36.9254, -23.5823, 86.9134, -39.6631, -23.5823, 86.9134, -39.6631, -20.097, 86.9134, -36.9254, -20.097, 86.9134, -36.9254, -23.5823, 74.3394, -39.6631, -34.5706, 73.9272, -36.9254, -34.5706, 73.9272, -39.6631, -34.5706, 74.3394, -39.6631, -34.5706, 74.3394, -36.9254, -34.5706, 73.9272, -36.9254, -34.5706, 74.3394, -45.3273, -34.5706, 73.9272, -39.6631, -34.5706, 73.9272, -45.3273, -34.5706, 74.3394, -45.3273, -34.5706, 74.3394, -39.6631, -34.5706, 73.9272, -39.6631, -34.5706, 86.9134, -45.3273, -20.097, 86.9134, -39.6631, -23.5823, 86.9134, -45.3273, -23.5823, 86.9134, -45.3273, -20.097, 86.9134, -39.6631, -20.097, 86.9134, -39.6631, -23.5823, 73.9272, -45.3273, -34.5706, 73.9272, -39.6631, -34.1467, 73.9272, -45.3273, -34.1467, 73.9272, -45.3273, -34.5706, 73.9272, -39.6631, -34.5706, 73.9272, -39.6631, -34.1467, 86.9134, -45.3273, -17.3019, 86.9134, -39.6631, -20.097, 86.9134, -45.3273, -20.097, 86.9134, -45.3273, -17.3019, 86.9134, -39.6631, -17.3019, 86.9134, -39.6631, -20.097, 86.9134, -45.3273, -34.1467, 86.9134, -39.6631, -34.5706, 86.9134, -45.3273, -34.5706, 86.9134, -45.3273, -34.1467, 86.9134, -39.6631, -34.1467, 86.9134, -39.6631, -34.5706, 73.9272, -45.3273, -34.1467, 73.9272, -39.6631, -23.5823, 73.9272, -45.3273, -23.5823, 73.9272, -45.3273, -34.1467, 73.9272, -39.6631, -34.1467, 73.9272, -39.6631, -23.5823, 86.5013, -45.3273, -16.8779, 86.9134, -39.6631, -16.8779, 86.9134, -45.3273, -16.8779, 86.5013, -45.3273, -16.8779, 86.5013, -39.6631, -16.8779, 86.9134, -39.6631, -16.8779, 73.9272, -45.3273, -17.3019, 73.9272, -39.6631, -16.8779, 73.9272, -45.3273, -16.8779, 73.9272, -45.3273, -17.3019, 73.9272, -39.6631, -17.3019, 73.9272, -39.6631, -16.8779, 86.5013, -45.3273, -34.5706, 74.3394, -39.6631, -34.5706, 74.3394, -45.3273, -34.5706, 86.5013, -45.3273, -34.5706, 86.5013, -39.6631, -34.5706, 74.3394, -39.6631, -34.5706, 73.9272, -45.3273, -20.097, 73.9272, -39.6631, -17.3019, 73.9272, -45.3273, -17.3019, 73.9272, -45.3273, -20.097, 73.9272, -39.6631, -20.097, 73.9272, -39.6631, -17.3019, 73.9272, -45.3273, -16.8779, 74.3394, -39.6631, -16.8779, 74.3394, -45.3273, -16.8779, 73.9272, -45.3273, -16.8779, 73.9272, -39.6631, -16.8779, 74.3394, -39.6631, -16.8779, 86.9134, -45.3273, -16.8779, 86.9134, -39.6631, -17.3019, 86.9134, -45.3273, -17.3019, 86.9134, -45.3273, -16.8779, 86.9134, -39.6631, -16.8779, 86.9134, -39.6631, -17.3019, 74.3394, -45.3273, -16.8779, 86.5013, -39.6631, -16.8779, 86.5013, -45.3273, -16.8779, 74.3394, -45.3273, -16.8779, 74.3394, -39.6631, -16.8779, 86.5013, -39.6631, -16.8779, 86.9134, -45.3273, -23.5823, 86.9134, -39.6631, -34.1467, 86.9134, -45.3273, -34.1467, 86.9134, -45.3273, -23.5823, 86.9134, -39.6631, -23.5823, 86.9134, -39.6631, -34.1467, 86.9134, -45.3273, -34.5706, 86.5013, -39.6631, -34.5706, 86.5013, -45.3273, -34.5706, 86.9134, -45.3273, -34.5706, 86.9134, -39.6631, -34.5706, 86.5013, -39.6631, -34.5706, 86.5013, -45.3273, -34.1467, 86.5013, -39.6849, -23.5823, 86.5013, -45.3273, -23.5823, 86.5013, -45.3273, -34.1467, 86.5013, -39.6849, -34.1467, 86.5013, -39.6849, -23.5823, 74.3394, -45.3273, -23.5823, 74.3394, -39.6849, -34.1467, 74.3394, -45.3273, -34.1467, 74.3394, -45.3273, -23.5823, 74.3394, -39.6849, -23.5823, 74.3394, -39.6849, -34.1467, 86.5013, -45.3273, -17.3019, 74.3394, -39.6849, -17.3019, 74.3394, -45.3273, -17.3019, 86.5013, -45.3273, -17.3019, 86.5013, -39.6849, -17.3019, 74.3394, -39.6849, -17.3019, 74.3394, -45.3273, -17.3019, 74.3394, -39.6849, -20.097, 74.3394, -45.3273, -20.097, 74.3394, -45.3273, -17.3019, 74.3394, -39.6849, -17.3019, 74.3394, -39.6849, -20.097, 74.3394, -45.3273, -34.1467, 86.5013, -39.6849, -34.1467, 86.5013, -45.3273, -34.1467, 74.3394, -45.3273, -34.1467, 74.3394, -39.6849, -34.1467, 86.5013, -39.6849, -34.1467, 86.5013, -45.3273, -20.097, 86.5013, -39.6849, -17.3019, 86.5013, -45.3273, -17.3019, 86.5013, -45.3273, -20.097, 86.5013, -39.6849, -20.097, 86.5013, -39.6849, -17.3019, 86.5013, -45.3273, -23.5823, 86.5013, -39.6849, -20.097, 86.5013, -45.3273, -20.097, 86.5013, -45.3273, -23.5823, 86.5013, -39.6849, -23.5823, 86.5013, -39.6849, -20.097, 74.3394, -45.3273, -20.097, 73.9421, -45.3273, -23.5823, 74.3394, -45.3273, -23.5823, 74.3394, -45.3273, -20.097, 73.9421, -45.3273, -20.097, 73.9421, -45.3273, -23.5823, 74.3394, -36.9254, -34.1467, 74.3394, -36.9254, -20.097, 74.3394, -36.9254, -23.5823, 74.3394, -36.9254, -20.097, 86.5013, -36.9254, -17.3019, 74.3394, -36.9254, -17.3019, 86.5013, -36.9254, -17.3019, 86.5013, -36.9254, -23.5823, 86.5013, -36.9254, -20.097, 86.5013, -36.9254, -23.5823, 74.3394, -36.9254, -34.1467, 86.5013, -36.9254, -34.1467, 74.3394, -36.9254, -34.1467, 86.5013, -36.9254, -17.3019, 74.3394, -36.9254, -20.097, 86.5013, -36.9254, -17.3019, 74.3394, -36.9254, -34.1467, 86.5013, -36.9254, -23.5823 )
 
-[sub_resource type="ArrayMesh" id=281]
+[sub_resource type="ArrayMesh" id=68]
 resource_name = "Plane001"
 surfaces/0 = {
 "aabb": AABB( -1.72813, -0.164313, -1.65113, 2.72813, 0.164323, 3.16819 ),
@@ -477,14 +478,14 @@ surfaces/0 = {
 "vertex_count": 302
 }
 
-[sub_resource type="BoxShape" id=282]
+[sub_resource type="BoxShape" id=69]
 extents = Vector3( 0.652757, 1, 0.722057 )
 
-[sub_resource type="DynamicFont" id=283]
+[sub_resource type="DynamicFont" id=70]
 size = 40
 font_data = ExtResource( 14 )
 
-[sub_resource type="Animation" id=284]
+[sub_resource type="Animation" id=71]
 resource_name = "Hide"
 length = 0.5
 tracks/0/type = "value"
@@ -512,7 +513,7 @@ tracks/1/keys = {
 "values": [ true, false ]
 }
 
-[sub_resource type="Animation" id=285]
+[sub_resource type="Animation" id=72]
 resource_name = "Init"
 length = 0.001
 tracks/0/type = "value"
@@ -540,7 +541,7 @@ tracks/1/keys = {
 "values": [ false ]
 }
 
-[sub_resource type="Animation" id=286]
+[sub_resource type="Animation" id=73]
 length = 0.5
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:modulate")
@@ -567,7 +568,7 @@ tracks/1/keys = {
 "values": [ true ]
 }
 
-[sub_resource type="Animation" id=287]
+[sub_resource type="Animation" id=74]
 resource_name = "Hide"
 length = 0.5
 tracks/0/type = "value"
@@ -595,7 +596,7 @@ tracks/1/keys = {
 "values": [ true, false ]
 }
 
-[sub_resource type="Animation" id=288]
+[sub_resource type="Animation" id=75]
 resource_name = "Init"
 length = 0.001
 tracks/0/type = "value"
@@ -623,7 +624,7 @@ tracks/1/keys = {
 "values": [ false ]
 }
 
-[sub_resource type="Animation" id=289]
+[sub_resource type="Animation" id=76]
 resource_name = "Show"
 length = 0.5
 tracks/0/type = "value"
@@ -651,7 +652,7 @@ tracks/1/keys = {
 "values": [ true ]
 }
 
-[sub_resource type="Animation" id=290]
+[sub_resource type="Animation" id=77]
 resource_name = "Hide"
 length = 0.5
 tracks/0/type = "value"
@@ -679,7 +680,7 @@ tracks/1/keys = {
 "values": [ true, false ]
 }
 
-[sub_resource type="Animation" id=291]
+[sub_resource type="Animation" id=78]
 resource_name = "Init"
 length = 0.001
 tracks/0/type = "value"
@@ -707,7 +708,7 @@ tracks/1/keys = {
 "values": [ false ]
 }
 
-[sub_resource type="Animation" id=292]
+[sub_resource type="Animation" id=79]
 resource_name = "Show"
 length = 0.5
 tracks/0/type = "value"
@@ -735,7 +736,7 @@ tracks/1/keys = {
 "values": [ true ]
 }
 
-[sub_resource type="ArrayMesh" id=293]
+[sub_resource type="ArrayMesh" id=80]
 resource_name = "Sphere"
 surfaces/0 = {
 "aabb": AABB( -11.0937, -6.71434, -11.0937, 22.1873, 11.0937, 22.1873 ),
@@ -750,33 +751,33 @@ surfaces/0 = {
 "vertex_count": 1025
 }
 
-[sub_resource type="DynamicFont" id=294]
+[sub_resource type="DynamicFont" id=81]
 size = 64
 font_data = ExtResource( 25 )
 
-[sub_resource type="StyleBoxFlat" id=295]
+[sub_resource type="StyleBoxFlat" id=82]
 bg_color = Color( 0.294118, 0.294118, 0.294118, 1 )
 
-[sub_resource type="StyleBoxFlat" id=296]
+[sub_resource type="StyleBoxFlat" id=83]
 bg_color = Color( 0.054902, 0.054902, 0.054902, 1 )
 
-[sub_resource type="StyleBoxFlat" id=297]
+[sub_resource type="StyleBoxFlat" id=84]
 bg_color = Color( 0.133333, 0.133333, 0.133333, 1 )
 
-[sub_resource type="DynamicFont" id=298]
+[sub_resource type="DynamicFont" id=85]
 size = 48
 font_data = ExtResource( 25 )
 
-[sub_resource type="StyleBoxFlat" id=299]
+[sub_resource type="StyleBoxFlat" id=86]
 bg_color = Color( 1, 1, 1, 1 )
 
-[sub_resource type="StyleBoxFlat" id=300]
+[sub_resource type="StyleBoxFlat" id=87]
 bg_color = Color( 0.768627, 0.768627, 0.768627, 1 )
 
-[sub_resource type="StyleBoxFlat" id=301]
+[sub_resource type="StyleBoxFlat" id=88]
 bg_color = Color( 0.819608, 0.819608, 0.819608, 1 )
 
-[sub_resource type="Animation" id=302]
+[sub_resource type="Animation" id=89]
 resource_name = "OnEnd"
 length = 8.0
 tracks/0/type = "value"
@@ -871,7 +872,9 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.28, 0 )
 far = 400.0
 script = ExtResource( 7 )
 
-[node name="YourStuff" type="Spatial" parent="Player/Camera"]
+[node name="YourStuff" type="Spatial" parent="Player/Camera" groups=[
+"YourStuff",
+]]
 transform = Transform( 1, 0, 0, 0, 0.296591, 0.955004, 0, -0.955004, 0.296591, 0, -0.358303, -0.149196 )
 script = ExtResource( 3 )
 
@@ -1277,7 +1280,7 @@ collision_mask = 4096
 
 [node name="Plane001" type="MeshInstance" parent="diary"]
 transform = Transform( 0.329537, 0, 0, 0, 0.329537, 0, 0, 0, 0.329537, 0.112374, -1.56863, 0.670332 )
-mesh = SubResource( 281 )
+mesh = SubResource( 68 )
 material/0 = null
 
 [node name="Camera" type="Camera" parent="diary" groups=[
@@ -1287,7 +1290,7 @@ transform = Transform( 1, 0, 0, 0, 0.116827, 0.993152, 0, -0.993152, 0.116827, 0
 
 [node name="CollisionShape" type="CollisionShape" parent="diary"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.46465, 0.646377 )
-shape = SubResource( 282 )
+shape = SubResource( 69 )
 
 [node name="UI" type="CanvasLayer" parent="."]
 
@@ -1302,7 +1305,7 @@ margin_left = -260.572
 margin_top = -164.451
 margin_right = 242.428
 margin_bottom = -124.451
-custom_fonts/font = SubResource( 283 )
+custom_fonts/font = SubResource( 70 )
 text = "Press E to pick up this lost page"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -1319,7 +1322,7 @@ margin_left = -173.448
 margin_top = -59.0
 margin_right = 166.552
 margin_bottom = -19.0
-custom_fonts/font = SubResource( 283 )
+custom_fonts/font = SubResource( 70 )
 text = "Press E to close Diary"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -1336,7 +1339,7 @@ margin_left = -173.448
 margin_top = -160.083
 margin_right = 168.552
 margin_bottom = -120.083
-custom_fonts/font = SubResource( 283 )
+custom_fonts/font = SubResource( 70 )
 text = "Press E to view Diary"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -1351,7 +1354,7 @@ margin_left = -366.0
 margin_top = -111.478
 margin_right = -2.0
 margin_bottom = -71.4777
-custom_fonts/font = SubResource( 283 )
+custom_fonts/font = SubResource( 70 )
 text = "Use WASD to move"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -1359,30 +1362,30 @@ __meta__ = {
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="UI/WASD"]
 autoplay = "Init"
-anims/Hide = SubResource( 284 )
-anims/Init = SubResource( 285 )
-anims/Show = SubResource( 286 )
+anims/Hide = SubResource( 71 )
+anims/Init = SubResource( 72 )
+anims/Show = SubResource( 73 )
 
 [node name="Tablet" type="Label" parent="UI"]
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-margin_left = -295.816
+margin_left = -305.816
 margin_top = -59.4777
-margin_right = 269.184
+margin_right = 301.184
 margin_bottom = -19.4777
-custom_fonts/font = SubResource( 283 )
-text = "Press B to open/close tablet & notes"
+custom_fonts/font = SubResource( 70 )
+text = "Press Tab to open/close tablet & notes"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="UI/Tablet"]
 autoplay = "Init"
-anims/Hide = SubResource( 287 )
-anims/Init = SubResource( 288 )
-anims/Show = SubResource( 289 )
+anims/Hide = SubResource( 74 )
+anims/Init = SubResource( 75 )
+anims/Show = SubResource( 76 )
 
 [node name="Mouse" type="Label" parent="UI"]
 anchor_left = 0.5
@@ -1393,7 +1396,7 @@ margin_left = 15.0
 margin_top = -110.478
 margin_right = 432.0
 margin_bottom = -70.4777
-custom_fonts/font = SubResource( 283 )
+custom_fonts/font = SubResource( 70 )
 text = "Use mouse to look around"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -1401,9 +1404,9 @@ __meta__ = {
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="UI/Mouse"]
 autoplay = "Init"
-anims/Hide = SubResource( 290 )
-anims/Init = SubResource( 291 )
-anims/Show = SubResource( 292 )
+anims/Hide = SubResource( 77 )
+anims/Init = SubResource( 78 )
+anims/Show = SubResource( 79 )
 
 [node name="SunModel" parent="." instance=ExtResource( 10 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.05689, 13.9152, 30.6396 )
@@ -1412,7 +1415,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.05689, 13.9152, 30.6396 )
 
 [node name="Sphere" type="MeshInstance" parent="sphere_roof"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.18631, 16.7588, 30.7077 )
-mesh = SubResource( 293 )
+mesh = SubResource( 80 )
 material/0 = null
 script = ExtResource( 24 )
 
@@ -1438,7 +1441,7 @@ margin_left = -117.5
 margin_top = 64.1447
 margin_right = 117.5
 margin_bottom = 128.145
-custom_fonts/font = SubResource( 294 )
+custom_fonts/font = SubResource( 81 )
 text = "PAUSED"
 
 [node name="Button" type="Button" parent="Pause/ColorRect"]
@@ -1449,10 +1452,10 @@ margin_top = 158.267
 margin_right = 97.5
 margin_bottom = 220.267
 focus_mode = 0
-custom_styles/hover = SubResource( 295 )
-custom_styles/pressed = SubResource( 296 )
-custom_styles/normal = SubResource( 297 )
-custom_fonts/font = SubResource( 298 )
+custom_styles/hover = SubResource( 82 )
+custom_styles/pressed = SubResource( 83 )
+custom_styles/normal = SubResource( 84 )
+custom_fonts/font = SubResource( 85 )
 enabled_focus_mode = 0
 text = "resume"
 
@@ -1481,7 +1484,7 @@ margin_left = -283.0
 margin_top = -288.145
 margin_right = 283.0
 margin_bottom = -157.145
-custom_fonts/font = SubResource( 294 )
+custom_fonts/font = SubResource( 81 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "the end.
 thank you for playing."
@@ -1499,10 +1502,10 @@ margin_top = 462.454
 margin_right = 97.5
 margin_bottom = 524.454
 focus_mode = 0
-custom_styles/hover = SubResource( 299 )
-custom_styles/pressed = SubResource( 300 )
-custom_styles/normal = SubResource( 301 )
-custom_fonts/font = SubResource( 298 )
+custom_styles/hover = SubResource( 86 )
+custom_styles/pressed = SubResource( 87 )
+custom_styles/normal = SubResource( 88 )
+custom_fonts/font = SubResource( 85 )
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
@@ -1511,7 +1514,12 @@ enabled_focus_mode = 0
 text = "quit"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="End/ColorRect"]
-anims/OnEnd = SubResource( 302 )
+anims/OnEnd = SubResource( 89 )
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 28 )
+volume_db = 4.4
+autoplay = true
 
 [connection signal="mouse_entered" from="Player/Camera/YourStuff/Slider/GUIPanel3D/SlideToTabletThing" to="Player/Camera/YourStuff" method="_on_SlideToTabletThing_mouse_entered"]
 [connection signal="mouse_entered" from="Player/Camera/YourStuff/Slider/notepad/SlideToNotepadThing" to="Player/Camera/YourStuff" method="_on_SlideToNotepadThing_mouse_entered"]

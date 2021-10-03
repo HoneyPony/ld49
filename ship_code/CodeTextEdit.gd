@@ -6,6 +6,8 @@ func _ready():
 	var level = GS.find_level(GS.current_level_id)
 	if level != null:
 		text = level.last_code
+		
+	YourStuff = get_tree().get_nodes_in_group("YourStuff")[0]
 	
 var valid_chars = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F']
 	
@@ -83,17 +85,27 @@ func highlight_won():
 	
 var last_highlighted_code = 0
 var is_highlighting_code = false
+
+var is_ready_done = true
 	
+var YourStuff
+
 func _process(delta):
 	if is_highlighting_code:
 		highlight_code(last_highlighted_code)
 		
-	
+	if not YourStuff.showing_stuff:
+		focus_mode = FOCUS_NONE
+	else:
+		if is_ready_done:
+			focus_mode = FOCUS_ALL
 		
 func ready_playing():
 	selecting_enabled = true
 	is_highlighting_code = true
 	focus_mode = FOCUS_NONE
+	
+	is_ready_done = false
 	
 func ready_done():
 	selecting_enabled = true
@@ -103,4 +115,5 @@ func ready_done():
 	caret_position = (text.length())
 	
 	text = the_code
+	is_ready_done = true
 	

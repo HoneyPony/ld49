@@ -231,7 +231,9 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="LineEdit" type="LineEdit" parent="UI/Root"]
+[node name="LineEdit" type="LineEdit" parent="UI/Root" groups=[
+"CodeEditor",
+]]
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -333,7 +335,9 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Ship" type="Sprite" parent="."]
+[node name="Ship" type="Sprite" parent="." groups=[
+"TheShip",
+]]
 material = SubResource( 4 )
 scale = Vector2( 0.25, 0.25 )
 texture = ExtResource( 7 )
@@ -359,7 +363,6 @@ stream = ExtResource( 33 )
 
 [node name="TurboOn" parent="Ship" instance=ExtResource( 25 )]
 stream = ExtResource( 38 )
-volume_db = 1.3
 
 [node name="TurboOff" parent="Ship" instance=ExtResource( 25 )]
 stream = ExtResource( 39 )
