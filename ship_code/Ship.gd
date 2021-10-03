@@ -91,6 +91,10 @@ func get_next_code():
 		# Todo: Do we want some sort of special single-char codes...?
 		code_string = ""
 		
+		if current_code == CodeInternal.None:
+			#Only highlight none once we're done executing the last command.
+			code_editor.highlight_none()
+		
 func do_error_anim():
 	current_code = CodeInternal.PlayAnAnimation
 	$AnimationPlayer.stop()
@@ -176,8 +180,25 @@ func is_turn_code(c):
 		#c == CodeInternal.StrafeLeft or\
 		#c == CodeInternal.StrafeRight
 		
+func won():
+	if GS.current_level_info != null:
+		GS.current_level_info.has_won = true
+		
+	code_editor.highlight_won()
+		
+func check_for_win():
+	if GS.current_puzzle_level != null:
+		var candidates = GS.current_puzzle_level.get_children()
+		for c in candidates:
+			if c.is_in_group("ShipEndPoint"):
+				if c.eval_win(self):
+					won()
+					return
+		
 func code_process(delta):
 	if current_code == CodeInternal.None:
+		check_for_win()
+		
 		get_next_code()
 		
 	if current_code == CodeInternal.PlayAnAnimation:

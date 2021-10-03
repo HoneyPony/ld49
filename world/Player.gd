@@ -30,47 +30,73 @@ var gravity = 60
 
 var ignore_next_mouse_frame = true
 
-func rotate_on_mouse(mouse, delta):
+func rotate_on_mouse(mouse_motion):
 	
-	rotation.y -= mouse.x * 80 * delta
+	var mouse = Vector2.ZERO
+	mouse.x = mouse_motion.x / 512
+	mouse.y = mouse_motion.y / 512
+	
+	rotation.y -= mouse.x * 80 * 0.016
 	
 	var cam = $Camera.rotation.x
-	cam -= mouse.y * 80 * delta
+	cam -= mouse.y * 80 * 0.016
 	
 	cam = clamp(cam, -PI / 2, PI / 2)
 	
 	$Camera.rotation.x = cam
 	
 	pass
+	
 
-func handle_mouse_things(delta):
+var last_mouse_place = Vector2.ZERO
+
+func handle_mouse_things(mouse_motion):
 	if is_paused or YourStuff.showing_stuff:
 		ignore_next_mouse_frame = true
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 		return
 		
-	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	
-	var mouse = get_viewport().get_mouse_position()
-
+#	var mouse = get_viewport().get_mouse_position()
+#
 	var center = get_viewport().size / 2.0
+#
+#	mouse = mouse - last_mouse_place
+#	mouse.x /= center.x # Dividing by center rather than size makes these -1 to 1
+#	mouse.y /= center.y
 	
-	mouse = mouse - center
-	mouse.x /= center.x # Dividing by center rather than size makes these -1 to 1
-	mouse.y /= center.y
+	#print("mouse: ", mouse, " center: ", center)
 	
-	get_viewport().warp_mouse(center)
+	#get_viewport().warp_mouse(center)
+	
+	#last_mouse_place = get_viewport().get_mouse_position()
+	
+	#print("warped: ", get_viewport().get_mouse_position())
 	
 	if not ignore_next_mouse_frame:
-		rotate_on_mouse(mouse, delta)
+		rotate_on_mouse(mouse_motion)
 	ignore_next_mouse_frame = false
+	
+func _input(event: InputEvent):
+#	if event is InputEventMouseButton:
+#		if event.pressed:
+#			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	
+#	if event is InputEventAction:
+#		if event.action == "open_tablet":
+#			if YourStuff.showing_stuff:
+#				Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	
+	if event is InputEventMouseMotion:
+		handle_mouse_things(event.relative)
 
 func handle_oob():
 	if translation.y <= -50:
 		translation = Vector3(5.5, 1.15, -0.5)
 
 func _physics_process(delta):
-	handle_mouse_things(delta)
+	#handle_mouse_things(delta)
 	
 	if not YourStuff.showing_stuff:
 		var dir = get_move_dir()

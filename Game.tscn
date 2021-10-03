@@ -25,7 +25,7 @@
 [ext_resource path="res://puzzle_elements/1x2Square.tscn" type="PackedScene" id=23]
 [ext_resource path="res://puzzle_elements/ShipEndPoint.tscn" type="PackedScene" id=24]
 
-[sub_resource type="StyleBoxFlat" id=11]
+[sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.0666667, 0.0666667, 0.0666667, 1 )
 border_width_left = 6
 border_width_top = 6
@@ -40,7 +40,7 @@ expand_margin_left = 4.0
 expand_margin_right = 4.0
 expand_margin_top = 8.0
 
-[sub_resource type="StyleBoxFlat" id=12]
+[sub_resource type="StyleBoxFlat" id=2]
 bg_color = Color( 0.454902, 0.454902, 0.454902, 1 )
 border_width_left = 6
 border_width_top = 6
@@ -55,7 +55,7 @@ expand_margin_left = 4.0
 expand_margin_right = 4.0
 expand_margin_top = 8.0
 
-[sub_resource type="Shader" id=6]
+[sub_resource type="Shader" id=3]
 code = "shader_type canvas_item;
 
 uniform float turbo;
@@ -67,11 +67,11 @@ void fragment() {
 	COLOR = c;
 }"
 
-[sub_resource type="ShaderMaterial" id=7]
-shader = SubResource( 6 )
+[sub_resource type="ShaderMaterial" id=4]
+shader = SubResource( 3 )
 shader_param/turbo = 0.0
 
-[sub_resource type="Animation" id=8]
+[sub_resource type="Animation" id=5]
 resource_name = "ResetStates"
 length = 0.001
 tracks/0/type = "value"
@@ -87,7 +87,7 @@ tracks/0/keys = {
 "values": [ 0.0 ]
 }
 
-[sub_resource type="Animation" id=10]
+[sub_resource type="Animation" id=6]
 resource_name = "TurnOffTurbo"
 length = 0.8
 step = 0.05
@@ -118,7 +118,7 @@ tracks/1/keys = {
 } ]
 }
 
-[sub_resource type="Animation" id=9]
+[sub_resource type="Animation" id=7]
 resource_name = "TurnOnTurbo"
 length = 0.8
 step = 0.05
@@ -149,8 +149,7 @@ tracks/1/keys = {
 } ]
 }
 
-[sub_resource type="Animation" id=5]
-resource_name = "WiggleError"
+[sub_resource type="Animation" id=8]
 length = 0.6
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:cs_wiggle_amount")
@@ -179,7 +178,7 @@ tracks/1/keys = {
 } ]
 }
 
-[sub_resource type="ShaderMaterial" id=4]
+[sub_resource type="ShaderMaterial" id=9]
 shader = ExtResource( 2 )
 
 [node name="Root" type="Node2D"]
@@ -284,8 +283,8 @@ margin_top = -68.6272
 margin_right = -16.1007
 margin_bottom = -16.6272
 focus_mode = 0
-custom_styles/hover = SubResource( 11 )
-custom_styles/pressed = SubResource( 12 )
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
 custom_styles/normal = ExtResource( 15 )
 custom_fonts/font = ExtResource( 5 )
 custom_colors/font_color = Color( 0, 1, 0, 1 )
@@ -299,19 +298,19 @@ __meta__ = {
 }
 
 [node name="Ship" type="Sprite" parent="."]
-material = SubResource( 7 )
+material = SubResource( 4 )
 scale = Vector2( 0.25, 0.25 )
 texture = ExtResource( 7 )
 script = ExtResource( 6 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Ship"]
-anims/ResetStates = SubResource( 8 )
-anims/TurnOffTurbo = SubResource( 10 )
-anims/TurnOnTurbo = SubResource( 9 )
-anims/WiggleError = SubResource( 5 )
+anims/ResetStates = SubResource( 5 )
+anims/TurnOffTurbo = SubResource( 6 )
+anims/TurnOnTurbo = SubResource( 7 )
+anims/WiggleError = SubResource( 8 )
 
 [node name="Grid" type="Sprite" parent="."]
-material = SubResource( 4 )
+material = SubResource( 9 )
 position = Vector2( -32, -32 )
 scale = Vector2( 0.25, 0.25 )
 z_index = -100
@@ -785,10 +784,10 @@ position = Vector2( 192, -96 )
 [node name="2x1Square" parent="LevelTurboOffsetSTrafe" instance=ExtResource( 22 )]
 position = Vector2( 32, -256 )
 
+[connection signal="pressed" from="UI/Root/PlayButton" to="Ship" method="play"]
 [connection signal="pressed" from="UI/Root/PlayButton" to="UI/Root/PlayButton" method="_vis"]
 [connection signal="pressed" from="UI/Root/PlayButton" to="UI/Root/StopButton" method="_vis"]
-[connection signal="pressed" from="UI/Root/PlayButton" to="Ship" method="play"]
+[connection signal="pressed" from="UI/Root/StopButton" to="Ship" method="reset_self"]
 [connection signal="pressed" from="UI/Root/StopButton" to="UI/Root/PlayButton" method="_vis"]
 [connection signal="pressed" from="UI/Root/StopButton" to="UI/Root/StopButton" method="_vis"]
-[connection signal="pressed" from="UI/Root/StopButton" to="Ship" method="reset_self"]
 [connection signal="pressed" from="UI/Root/BackButton" to="UI/Root/BackButton" method="_on_BackButton_pressed"]

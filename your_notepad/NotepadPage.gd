@@ -1,0 +1,55 @@
+extends Control
+
+var page = 1
+var last_page = 1
+
+var pages = []
+
+func _ready():
+	$Page2.visible = false
+	$Page3.visible = false
+	$Page4.visible = false
+	$Page5.visible = false
+	$Page6.visible = false
+	
+
+func build_pages():
+	pages = [$Page1]
+	last_page = 1
+	
+	if GS.has_L:
+		pages.append($Page2)
+		last_page += 1
+		
+	if GS.has_R:
+		pages.append($Page3)
+		last_page += 1
+		
+	if GS.has_Turb:
+		pages.append($Page4)
+		last_page += 1
+		
+	if GS.has_SL:
+		pages.append($Page5)
+		last_page += 1
+		
+	if GS.has_SR:
+		pages.append($Page6)
+		last_page += 1
+
+func turn(dir):
+	var pnew = page + dir
+	pnew = clamp(pnew, 1, last_page)
+
+	page = pnew
+	
+func _process(delta):
+	$Prev.visible = page > 1
+	$Next.visible = page < last_page
+	
+	build_pages()
+	
+	var n = page - 1
+	for p in pages:
+		p.visible = (n == 0)
+		n -= 1
