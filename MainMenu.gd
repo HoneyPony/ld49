@@ -7,10 +7,14 @@ func _ready():
 	
 	if GS.very_first_load:
 		GS.very_first_load = false
-		#OS.set_window_maximized(true)
+		OS.set_window_maximized(true)
 
 func _on_Button_pressed():
 	get_tree().change_scene_to(GS.Main3D)
 
 func _on_Quit_pressed():
 	get_tree().quit()
+
+
+func _on_Quit2_pressed():
+	OS.window_fullscreen = not OS.window_fullscreen
