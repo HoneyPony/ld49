@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/select_try_1.wav-1106bc1d37e9e99a764a3c3e049f1bfb.sample"
+
+[deps]
+
+source_file="res://sfxia/select_try_1.wav"
+dest_files=[ "res://.import/select_try_1.wav-1106bc1d37e9e99a764a3c3e049f1bfb.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

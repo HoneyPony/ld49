@@ -99,6 +99,7 @@ func do_error_anim():
 	current_code = CodeInternal.PlayAnAnimation
 	$AnimationPlayer.stop()
 	$AnimationPlayer.play("WiggleError")
+	$Err.play()
 		
 func evaluate_target_pos():
 	var level: Node2D = GS.current_puzzle_level
@@ -114,7 +115,9 @@ func evaluate_target_pos():
 					cs_target_pos = Vector2.ZERO
 					cs_root_pos = position
 					do_error_anim()
-					return
+					return false
+					
+	return true
 		
 func init_code_state():
 	if current_code == CodeInternal.None: # this happens when there's an invalid code
@@ -123,29 +126,37 @@ func init_code_state():
 	
 	if current_code == CodeInternal.MoveForward:
 		cs_target_pos = polar2cartesian(64 * turbo_multiplier_state, rotation) + position
-		evaluate_target_pos()
+		if evaluate_target_pos():
+			if turbo_multiplier_state >= 2.0:
+				$MoveTurbo.play()
+			else:
+				$Move.play()
 		
 	if current_code == CodeInternal.StrafeLeft:
 		cs_target_pos = polar2cartesian(64, deg2rad(rotation_degrees - 90)) + position
-		evaluate_target_pos()
+		if evaluate_target_pos():
+			$Move.play()
 		
-		cs_rotate_amount = -90
-		cs_rot_vel = 180 * (move_vel / 64)
+		#cs_rotate_amount = -90
+	#	cs_rot_vel = 180 * (move_vel / 64)
 		
 	if current_code == CodeInternal.StrafeRight:
 		cs_target_pos = polar2cartesian(64, deg2rad(rotation_degrees + 90)) + position
-		evaluate_target_pos()
+		if evaluate_target_pos():
+			$Move.play()
 		
-		cs_rotate_amount = 90
-		cs_rot_vel = 180 * (move_vel / 64)
+		#cs_rotate_amount = 90
+		#cs_rot_vel = 180 * (move_vel / 64)
 		
 	if current_code == CodeInternal.TurnRight:
 		cs_rot_vel = rot_vel
 		cs_rotate_amount = 90
+		$Rot.play()
 		
 	if current_code == CodeInternal.TurnLeft:
 		cs_rot_vel = rot_vel
 		cs_rotate_amount = -90
+		$Rot.play()
 		
 	if current_code == CodeInternal.EnableTurbo:
 		if turbo_multiplier_state >= 2.0:
@@ -197,6 +208,10 @@ func check_for_win():
 		
 func code_process(delta):
 	if current_code == CodeInternal.None:
+		position.x = round(position.x / 64.0) * 64.0
+		position.y = round(position.y / 64.0) * 64.0
+		rotation_degrees = round(rotation_degrees / 90.0) * 90.0
+		
 		check_for_win()
 		
 		get_next_code()

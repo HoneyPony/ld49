@@ -17,6 +17,7 @@ func update_level_code():
 	
 func _on_text_changed(_new_text):
 	
+	[$Key1, $Key2, $Key3, $Key4][int(rand_range(0, 3.9))].play_sfx()
 	
 	var t: String = text.substr(0, 3 * 7 + 2)
 	t = t.to_upper()
@@ -62,6 +63,9 @@ func highlight_code(which):
 func highlight_none():
 	if last_highlighted_code == -50:
 		return
+		
+	if last_highlighted_code != -25:
+		$Fail.play_usual()
 	
 	last_highlighted_code = -25
 	deselect()
@@ -69,6 +73,9 @@ func highlight_none():
 	text = "CO DE  W RO NG"
 	
 func highlight_won():
+	if last_highlighted_code != -50:
+		$Win.play_usual()
+	
 	last_highlighted_code = -50
 	deselect()
 	

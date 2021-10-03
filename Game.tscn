@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=2]
+[gd_scene load_steps=47 format=2]
 
 [ext_resource path="res://ship_code/PlayButton_Pressed.svg" type="Texture" id=1]
 [ext_resource path="res://misc/GLES2RepeatingTexture.gdshader" type="Shader" id=2]
@@ -24,6 +24,19 @@
 [ext_resource path="res://puzzle_elements/2x1Square.tscn" type="PackedScene" id=22]
 [ext_resource path="res://puzzle_elements/1x2Square.tscn" type="PackedScene" id=23]
 [ext_resource path="res://puzzle_elements/ShipEndPoint.tscn" type="PackedScene" id=24]
+[ext_resource path="res://SFXRand.tscn" type="PackedScene" id=25]
+[ext_resource path="res://sfx/keys/key4.wav" type="AudioStream" id=26]
+[ext_resource path="res://sfx/keys/key2.wav" type="AudioStream" id=27]
+[ext_resource path="res://sfx/keys/key1.wav" type="AudioStream" id=28]
+[ext_resource path="res://sfx/keys/key3.wav" type="AudioStream" id=29]
+[ext_resource path="res://sfxia/metallic.wav" type="AudioStream" id=30]
+[ext_resource path="res://sfxia/ship_move_1.wav" type="AudioStream" id=31]
+[ext_resource path="res://sfxia/really_neat_sound.wav" type="AudioStream" id=32]
+[ext_resource path="res://sfxia/ship_move_1_turbo.wav" type="AudioStream" id=33]
+[ext_resource path="res://sfxia/rotate_attempt.wav" type="AudioStream" id=34]
+[ext_resource path="res://sfxia/err_2.wav" type="AudioStream" id=35]
+[ext_resource path="res://sfxia/sounds_like_failure.wav" type="AudioStream" id=36]
+[ext_resource path="res://sfxia/winner_maybe.wav" type="AudioStream" id=37]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.0666667, 0.0666667, 0.0666667, 1 )
@@ -238,6 +251,24 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Key1" parent="UI/Root/LineEdit" instance=ExtResource( 25 )]
+stream = ExtResource( 28 )
+
+[node name="Key2" parent="UI/Root/LineEdit" instance=ExtResource( 25 )]
+stream = ExtResource( 27 )
+
+[node name="Key3" parent="UI/Root/LineEdit" instance=ExtResource( 25 )]
+stream = ExtResource( 29 )
+
+[node name="Key4" parent="UI/Root/LineEdit" instance=ExtResource( 25 )]
+stream = ExtResource( 26 )
+
+[node name="Fail" parent="UI/Root/LineEdit" instance=ExtResource( 25 )]
+stream = ExtResource( 36 )
+
+[node name="Win" parent="UI/Root/LineEdit" instance=ExtResource( 25 )]
+stream = ExtResource( 37 )
+
 [node name="PlayButton" type="TextureButton" parent="UI/Root"]
 anchor_left = 1.0
 anchor_top = 1.0
@@ -254,6 +285,9 @@ script = ExtResource( 8 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Button" parent="UI/Root/PlayButton" instance=ExtResource( 25 )]
+stream = ExtResource( 32 )
 
 [node name="StopButton" type="TextureButton" parent="UI/Root"]
 visible = false
@@ -308,6 +342,18 @@ anims/ResetStates = SubResource( 5 )
 anims/TurnOffTurbo = SubResource( 6 )
 anims/TurnOnTurbo = SubResource( 7 )
 anims/WiggleError = SubResource( 8 )
+
+[node name="Move" parent="Ship" instance=ExtResource( 25 )]
+stream = ExtResource( 31 )
+
+[node name="Rot" parent="Ship" instance=ExtResource( 25 )]
+stream = ExtResource( 34 )
+
+[node name="Err" parent="Ship" instance=ExtResource( 25 )]
+stream = ExtResource( 35 )
+
+[node name="MoveTurbo" parent="Ship" instance=ExtResource( 25 )]
+stream = ExtResource( 33 )
 
 [node name="Grid" type="Sprite" parent="."]
 material = SubResource( 9 )
@@ -404,7 +450,6 @@ position = Vector2( 64, -192 )
 [node name="LevelTurnLefts2" type="Node2D" parent="." groups=[
 "Levels",
 ]]
-visible = false
 script = ExtResource( 13 )
 __meta__ = {
 "_edit_lock_": true
@@ -755,6 +800,7 @@ position = Vector2( -320, 128 )
 [node name="LevelTurboOffsetSTrafe" type="Node2D" parent="." groups=[
 "Levels",
 ]]
+visible = false
 script = ExtResource( 13 )
 __meta__ = {
 "_edit_lock_": true
@@ -783,6 +829,9 @@ position = Vector2( 192, -96 )
 
 [node name="2x1Square" parent="LevelTurboOffsetSTrafe" instance=ExtResource( 22 )]
 position = Vector2( 32, -256 )
+
+[node name="Select" parent="." instance=ExtResource( 25 )]
+stream = ExtResource( 30 )
 
 [connection signal="pressed" from="UI/Root/PlayButton" to="Ship" method="play"]
 [connection signal="pressed" from="UI/Root/PlayButton" to="UI/Root/PlayButton" method="_vis"]

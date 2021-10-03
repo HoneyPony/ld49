@@ -19,9 +19,20 @@ func does_obstruct(pos: Vector2):
 		if s != null:
 			var rot_as_vec = polar2cartesian(1, rotation)
 			var rotation_to_self = global_position - s.global_position
-			#print("t: ", rot_as_vec, " ", rotation_to_self)
+			
+		#	print("t: ", rot_as_vec, " ", rotation_to_self)
 			if (rot_as_vec - rotation_to_self.normalized()).length() < 0.001:
-				return false
+				
+				var is_on_ship = false
+				
+			#	print("r: ", rotation_to_self.length())
+				if rotation_to_self.length() < 1:
+					#print("yee")
+					is_on_ship = true
+				
+				if not is_on_ship:				
+					return false
 	
+#	print("REC: ", pos, " vs: ", global_position)
 	return rect.has_point(pos)
 		

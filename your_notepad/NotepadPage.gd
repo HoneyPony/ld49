@@ -43,6 +43,9 @@ func turn(dir):
 	var pnew = page + dir
 	pnew = clamp(pnew, 1, last_page)
 
+	if page != pnew:
+		$Turn.play_sfx()
+
 	page = pnew
 	
 func setup_pages():

@@ -3,6 +3,10 @@ extends Control
 export var DEBUG_enable_all_abilities = false
 
 func _ready():
+	if GS.second_ls_load:
+		$Select.play()
+	GS.second_ls_load = true
+	
 	# Helper to keep this instance non-invalid
 	GS.ship = null
 	

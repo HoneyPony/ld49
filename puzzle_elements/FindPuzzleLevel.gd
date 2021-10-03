@@ -1,6 +1,10 @@
 extends Node2D
 
 func _ready():
+	# This is the sound effect for selecting a level...
+	$Select.play()
+	
+	
 	# Do this to clean up invalid instances.
 	GS.current_puzzle_level = null
 	

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/ship_move_1_turbo.wav-582cc83203bc6c9a1bf1240adaa45720.sample"
+
+[deps]
+
+source_file="res://sfxia/ship_move_1_turbo.wav"
+dest_files=[ "res://.import/ship_move_1_turbo.wav-582cc83203bc6c9a1bf1240adaa45720.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

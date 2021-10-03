@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/key4.wav-2e4db9eb77fdfa2ad507a9cd3d9d79a8.sample"
+
+[deps]
+
+source_file="res://sfx/keys/key4.wav"
+dest_files=[ "res://.import/key4.wav-2e4db9eb77fdfa2ad507a9cd3d9d79a8.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

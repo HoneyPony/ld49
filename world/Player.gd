@@ -25,12 +25,14 @@ func get_move_dir():
 
 var velocity = Vector3.ZERO
 
-var move_speed = 16#8
+var move_speed = 8
 var accel_magnitude = 70
 
 var gravity = 60
 
 var ignore_next_mouse_frame = true
+
+var time_till_foot = 0.2
 
 func rotate_on_mouse(mouse_motion):
 	
@@ -125,11 +127,22 @@ func _physics_process(delta):
 		
 		velocity.y = max(velocity.y - gravity * delta, -30)
 		
-		velocity = move_and_slide(velocity)
+		velocity = move_and_slide(velocity, Vector3.UP)
 		
 		$Camera.accum_move += velocity.length() * delta
 		
 		
+		if velocity.length() > 3:
+			time_till_foot -= delta
+			if time_till_foot <= 0:
+				time_till_foot = 0.5
+				if is_on_floor():
+					[$Foot, $Foot2, $Foot3][int(rand_range(0, 2.9))].play_sfx()
+					#print("Footstep")
+		else:
+			time_till_foot -= delta
+			if time_till_foot <= 0.2:
+				time_till_foot = 0.2
 	handle_oob()
 		
 	if Input.is_action_just_pressed("pause"):

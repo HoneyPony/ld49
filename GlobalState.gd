@@ -20,6 +20,8 @@ var has_Turb = false
 var has_SL = false
 var has_SR = false
 
+var second_ls_load = false
+
 func activate_ability(which):
 	if which == 0:
 		has_L = true

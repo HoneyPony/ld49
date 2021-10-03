@@ -81,6 +81,10 @@ func _process(delta):
 		check_rays()
 		
 	if Input.is_action_just_pressed("open_tablet"):
+		if get_parent().is_diary_mode and not showing_stuff:
+			# Don't allow us to enter showing stuff while on diary.
+			return
+		
 		showing_stuff = not showing_stuff
 		if showing_stuff:
 			$ShowStuffP.play("Show")

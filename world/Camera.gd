@@ -72,6 +72,10 @@ func handle_accums(delta):
 		s2 = false
 		s3 = false
 		
+	if $YourStuff.showing_stuff:
+		s1 = false
+		s2 = false
+		
 	update(label_wasd, s1)
 	update(label_mouse, s2)
 	update(label_tab, s3)
@@ -97,6 +101,7 @@ func check_rays():
 	indicate_page.visible = got_col
 		
 func check_rays_notebook():
+	
 	var mouse = get_viewport().get_mouse_position()
 	var camera = self
 	var from = camera.project_ray_origin(mouse)
@@ -113,6 +118,9 @@ func check_rays_notebook():
 		col.check_mouse()
 		
 func check_rays_diary():
+	if $YourStuff.showing_stuff:
+		return
+	
 	var mouse = get_viewport().get_mouse_position()
 	var camera = self
 	var from = camera.project_ray_origin(mouse)
@@ -143,6 +151,7 @@ func _process(delta):
 		current = false
 		diary_cam.current = true
 		label_dia_open.visible = true
+		label_dia_close.visible = false
 		
 		if Input.is_action_just_pressed("activate"):
 			is_diary_mode = false
@@ -154,6 +163,9 @@ func _process(delta):
 		
 		check_rays_diary()
 		#Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	
+	if $YourStuff.showing_stuff:
+		label_dia_close.visible = false
 	
 	check_rays()
 	check_rays_notebook()

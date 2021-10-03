@@ -11,8 +11,8 @@ scale = Vector2( 0.25, 0.25 )
 z_index = -5
 texture = ExtResource( 2 )
 script = ExtResource( 1 )
-width_px = 64
-height_px = 64
+width_px = 60
+height_px = 60
 is_rot_gate = true
 
 [node name="Sprite" type="Sprite" parent="."]
