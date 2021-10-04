@@ -7,7 +7,6 @@
 [ext_resource path="res://fonts/LCDFont.tres" type="DynamicFont" id=5]
 [ext_resource path="res://ship_code/Ship.gd" type="Script" id=6]
 [ext_resource path="res://ship_code/Ship_FitsInCircle.svg" type="Texture" id=7]
-[ext_resource path="res://ship_code/CodeButtonToggleVis.gd" type="Script" id=8]
 [ext_resource path="res://ship_code/PlayButton.svg" type="Texture" id=9]
 [ext_resource path="res://puzzle_elements/Grid.svg" type="Texture" id=10]
 [ext_resource path="res://puzzle_elements/2x2Square.tscn" type="PackedScene" id=11]
@@ -39,6 +38,7 @@
 [ext_resource path="res://sfxia/winner_maybe.wav" type="AudioStream" id=37]
 [ext_resource path="res://sfxia/turbo_3.wav" type="AudioStream" id=38]
 [ext_resource path="res://sfx/turbo_reverse.wav" type="AudioStream" id=39]
+[ext_resource path="res://ManagePlayButton.gd" type="Script" id=40]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.0666667, 0.0666667, 0.0666667, 1 )
@@ -214,6 +214,7 @@ __meta__ = {
 [node name="Root" type="Control" parent="UI"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+script = ExtResource( 40 )
 __meta__ = {
 "_edit_lock_": true,
 "_edit_use_anchors_": false
@@ -285,16 +286,11 @@ margin_bottom = -14.6974
 texture_normal = ExtResource( 9 )
 texture_pressed = ExtResource( 1 )
 texture_hover = ExtResource( 3 )
-script = ExtResource( 8 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Button" parent="UI/Root/PlayButton" instance=ExtResource( 25 )]
-stream = ExtResource( 32 )
-
 [node name="StopButton" type="TextureButton" parent="UI/Root"]
-visible = false
 anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
@@ -306,7 +302,6 @@ margin_bottom = -15.6661
 texture_normal = ExtResource( 16 )
 texture_pressed = ExtResource( 17 )
 texture_hover = ExtResource( 18 )
-script = ExtResource( 8 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -334,6 +329,9 @@ script = ExtResource( 20 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Button" parent="UI/Root" instance=ExtResource( 25 )]
+stream = ExtResource( 32 )
 
 [node name="Ship" type="Sprite" parent="." groups=[
 "TheShip",
@@ -847,9 +845,7 @@ position = Vector2( 32, -256 )
 stream = ExtResource( 30 )
 
 [connection signal="pressed" from="UI/Root/PlayButton" to="Ship" method="play"]
-[connection signal="pressed" from="UI/Root/PlayButton" to="UI/Root/PlayButton" method="_vis"]
-[connection signal="pressed" from="UI/Root/PlayButton" to="UI/Root/StopButton" method="_vis"]
+[connection signal="pressed" from="UI/Root/PlayButton" to="UI/Root" method="_on_PlayButton_pressed"]
 [connection signal="pressed" from="UI/Root/StopButton" to="Ship" method="reset_self"]
-[connection signal="pressed" from="UI/Root/StopButton" to="UI/Root/PlayButton" method="_vis"]
-[connection signal="pressed" from="UI/Root/StopButton" to="UI/Root/StopButton" method="_vis"]
+[connection signal="pressed" from="UI/Root/StopButton" to="UI/Root" method="_on_StopButton_pressed"]
 [connection signal="pressed" from="UI/Root/BackButton" to="UI/Root/BackButton" method="_on_BackButton_pressed"]
