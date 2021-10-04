@@ -291,13 +291,14 @@ __meta__ = {
 }
 
 [node name="StopButton" type="TextureButton" parent="UI/Root"]
+visible = false
 anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -271.477
+margin_left = -277.709
 margin_top = -79.6661
-margin_right = -207.477
+margin_right = -213.709
 margin_bottom = -15.6661
 texture_normal = ExtResource( 16 )
 texture_pressed = ExtResource( 17 )
