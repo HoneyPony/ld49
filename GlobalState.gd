@@ -32,6 +32,9 @@ var second_ls_load = false
 # THIS ONE IS NOT RESET!!!
 var very_first_load = true
 
+# This one is also not reset
+var invert_mouse = false
+
 func reset_GS():
 	hover_prev_button = false
 	hover_next_button = false

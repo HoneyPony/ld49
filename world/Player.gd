@@ -43,7 +43,10 @@ func rotate_on_mouse(mouse_motion):
 	rotation.y -= mouse.x * 80 * 0.016
 	
 	var cam = $Camera.rotation.x
-	cam -= mouse.y * 80 * 0.016
+	var cam_drag_sign = 1
+	if GS.invert_mouse:
+		cam_drag_sign = -1
+	cam -= mouse.y * 80 * 0.016 * cam_drag_sign
 	
 	cam = clamp(cam, -PI / 2, PI / 2)
 	
