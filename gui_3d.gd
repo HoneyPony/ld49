@@ -32,7 +32,12 @@ func _mouse_entered_area():
 	is_mouse_inside = true
 
 
+var disable_ui = false
+
 func _unhandled_input(event):
+	if disable_ui:
+		return
+	
 	# Check if the event is a non-mouse/non-touch event
 	var is_mouse_event = false
 	for mouse_event in [InputEventMouseButton, InputEventMouseMotion, InputEventScreenDrag, InputEventScreenTouch]:
@@ -43,7 +48,7 @@ func _unhandled_input(event):
 	# If the event is a mouse/touch event and/or the mouse is either held or inside the area, then
 	# we need to do some additional processing in the handle_mouse function before passing the event to the viewport.
 	# If the event is not a mouse/touch event, then we can just pass the event directly to the viewport.
-	if is_mouse_event and (is_mouse_inside or is_mouse_held):
+	if is_mouse_event:# and (is_mouse_inside or is_mouse_held):
 		handle_mouse(event)
 	elif not is_mouse_event:
 		node_viewport.input(event)
@@ -59,7 +64,7 @@ func handle_mouse(event):
 		is_mouse_held = event.pressed
 
 	# Find mouse position in Area
-	var mouse_pos3D = find_mouse(event.global_position)
+	var mouse_pos3D = find_mouse(GS.get_mouse_position())#event.global_position)
 
 	# Check if the mouse is outside of bounds, use last position to avoid errors
 	# NOTE: mouse_exited signal was unrealiable in this situation

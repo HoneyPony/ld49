@@ -16,6 +16,8 @@ var the_notepad_col
 var the_tablet
 var the_notepad
 
+onready var gui_panel = get_node("Slider/GUIPanel3D")
+
 func _ready():
 	the_input_handler_col = get_node("Slider/GUIPanel3D/Quad/Area/CollisionShape")
 	the_shower_col = get_node("Slider/GUIPanel3D/SlideToTabletThing/CollisionShape")
@@ -61,7 +63,7 @@ func slide_notepad():
 		$SlideRight.play_sfx()
 
 func check_rays():
-	var mouse = get_viewport().get_mouse_position()
+	var mouse = GS.get_mouse_position()
 	var camera = get_node("../")
 	var from = camera.project_ray_origin(mouse)
 	var to = from + camera.project_ray_normal(mouse) * 10
@@ -83,6 +85,11 @@ func _process(delta):
 	
 	if showing_stuff:
 		check_rays()
+		
+	gui_panel.disable_ui = not showing_stuff
+	
+	if not showing_stuff:
+		GS.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 		
 	if Input.is_action_just_pressed("open_tablet"):
 		if get_parent().is_diary_mode and not showing_stuff:

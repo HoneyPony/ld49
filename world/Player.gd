@@ -64,11 +64,12 @@ var last_mouse_place = Vector2.ZERO
 func handle_mouse_things(mouse_motion):
 	if get_tree().paused or YourStuff.showing_stuff or $Camera.is_diary_mode:
 		ignore_next_mouse_frame = true
-		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+		
+		GS.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 		return
 		
 	
-	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	GS.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	
 #	var mouse = get_viewport().get_mouse_position()
 #
@@ -93,14 +94,14 @@ func handle_mouse_things(mouse_motion):
 func _input(event: InputEvent):
 #	if event is InputEventMouseButton:
 #		if event.pressed:
-#			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+#			GS.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	
 #	if event is InputEventAction:
 #		if event.action == "open_tablet":
 #			$Camera.accum_tab += 1
 			
 #			if YourStuff.showing_stuff:
-#				Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+#				GS.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	
 	if event is InputEventMouseMotion:
 		handle_mouse_things(event.relative)

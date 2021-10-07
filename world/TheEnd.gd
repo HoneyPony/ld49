@@ -9,7 +9,7 @@ func _ready():
 	pass
 	
 func anim():
-	$AnimationPlayer.play("OnEnd")
+	$AnimationPlayer.play("OnEndWeb")
 
 func pause():
 	get_tree().paused = true

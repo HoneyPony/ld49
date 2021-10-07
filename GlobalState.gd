@@ -35,6 +35,30 @@ var very_first_load = true
 # This one is also not reset
 var invert_mouse = false
 
+#func web_change_scene(s):
+#	var cur = get_tree().get_nodes_in_group("CurrentScene")
+#	for n in cur:
+#		n.queue_free()
+#
+#	var ins = s.instance()
+#	get_node("/root").add_child(ins)
+
+func set_mouse_mode(mode):
+	if mode == Input.MOUSE_MODE_CAPTURED:
+		WebMouseWorkaround.get_node("Cursor").visible = false
+	if mode == Input.MOUSE_MODE_VISIBLE:
+		WebMouseWorkaround.get_node("Cursor").visible = true
+
+func get_mouse_position():
+	return WebMouseWorkaround.get_node("Cursor").position
+
+func get_good_camera_ray():
+	var s = get_viewport().size
+	s.x /= 2
+	s.y /= 2
+#	s.y = 3 * s.y
+	return s
+
 func reset_GS():
 	hover_prev_button = false
 	hover_next_button = false

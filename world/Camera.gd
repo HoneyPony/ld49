@@ -81,7 +81,7 @@ func handle_accums(delta):
 	update(label_tab, s3)
 
 func check_rays():
-	var mouse = get_viewport().get_mouse_position()
+	var mouse = GS.get_good_camera_ray()
 	var camera = self
 	var from = camera.project_ray_origin(mouse)
 	var to = from + camera.project_ray_normal(mouse) * 5
@@ -102,7 +102,7 @@ func check_rays():
 		
 func check_rays_notebook():
 	
-	var mouse = get_viewport().get_mouse_position()
+	var mouse = GS.get_mouse_position()
 	var camera = self
 	var from = camera.project_ray_origin(mouse)
 	var to = from + camera.project_ray_normal(mouse) * 5
@@ -121,7 +121,7 @@ func check_rays_diary():
 	if $YourStuff.showing_stuff:
 		return
 	
-	var mouse = get_viewport().get_mouse_position()
+	var mouse = GS.get_good_camera_ray()
 	var camera = self
 	var from = camera.project_ray_origin(mouse)
 	var to = from + camera.project_ray_normal(mouse) * 5
